@@ -1,0 +1,24 @@
+# Tyrian purpledoc config
+inputs:
+  staticSite: website
+outputs:
+  destination: docs
+website:
+  title: Tyrian
+  description: Elm-inspired Scala UI library.
+  topNavLogo:
+    image: tyrian-horizontal.svg
+    width: 150.0
+    height: 50.0
+  logo:
+    image: tyrian.svg
+  latestRelease: 0.11.0
+  baseUrl: https://purplekingdomgames.github.io/tyrian-docs/
+  # baseUrl: http://127.0.0.1:8080/
+repo:
+  name: Github
+  url: https://github.com/PurpleKingdomGames/tyrian-docs
+  editBaseUrl: https://github.com/PurpleKingdomGames/tyrian-docs/blob/main
+discord:
+  name: Discord
+  url: https://discord.gg/b5CD47g

@@ -1,0 +1,31 @@
+header {
+  height: 50px;
+  background-color: #29016a;
+}
+
+header .row a {
+  color: #ffffff;
+}
+
+#sidebar {
+  padding-top: 1em;
+}
+
+#sidebar .nav-list .level4 {
+  margin-left: 24px;
+  font-size: 0.9em;
+}
+
+#sidebar .nav-list .level5 {
+  margin-left: 30px;
+  font-size: 0.9em;
+}
+
+#sidebar .nav-list .level6 {
+  margin-left: 36px;
+  font-size: 0.9em;
+}
+
+.icofont-laika {
+  color: white;
+}

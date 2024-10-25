@@ -1,0 +1,58 @@
+#header-left>img {
+  max-width: 100%;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(4px 4px 10px #00000055);
+}
+
+:root {
+  --primary-color: #ffffff;
+  --primary-light: #e4e4e4;
+  --primary-medium: #a888db;
+  --secondary-color: #9003c8;
+  --text-color: #5f5f5f;
+  --bg-color: #29016a;
+  --gradient-top: #9003c8;
+  --gradient-bottom: #29016a;
+  /*
+  --component-color: var(--primary-color);
+  --component-area-bg: var(--primary-light);
+  --component-hover: var(--secondary-color);
+  --component-border: var(--primary-medium);
+  --subtle-highlight: rgba(0, 0, 0, 0.05);
+  --messages-info: #007c99;
+  --messages-info-light: #ebf6f7;
+  --messages-warning: #b1a400;
+  --messages-warning-light: #fcfacd;
+  --messages-error: #d83030;
+  --messages-error-light: #ffe9e3;
+  --syntax-base1: #2a3236;
+  --syntax-base2: #8c878e;
+  --syntax-base3: #b2adb4;
+  --syntax-base4: #bddcee;
+  --syntax-base5: #e8e8e8;
+  --syntax-wheel1: #e28e93;
+  --syntax-wheel2: #ef9725;
+  --syntax-wheel3: #ffc66d;
+  --syntax-wheel4: #7fb971;
+  --syntax-wheel5: #4dbed4;
+  --body-font: "Lato", sans-serif;
+  --header-font: "Lato", sans-serif;
+  --code-font: "Fira Mono", monospace;
+  --body-font-size: 15px;
+  --code-font-size: 0.9em;
+  --small-font-size: 12px;
+  --title-font-size: 34px;
+  --header2-font-size: 28px;
+  --header3-font-size: 20px;
+  --header4-font-size: 15px;
+  --block-spacing: 10px;
+  --line-height: 1.5;
+  --content-width: 860px;
+  --nav-width: 275px;
+  --top-bar-height: 35px;
+  --landing-subtitle-font-size: 32px;
+  --teaser-title-font-size: 28px;
+  --teaser-body-font-size: 17px;
+  color-scheme: light dark;
+*/
+}

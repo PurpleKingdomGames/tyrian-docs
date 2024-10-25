@@ -1,1 +1,1 @@
-# Indigo Documentation
+# Tyrian Documentation

@@ -1,4 +1,5 @@
 # Tyrian purpledoc config
+kind: tyrian
 inputs:
   staticSite: website
 outputs:
@@ -17,7 +18,7 @@ website:
   # baseUrl: http://127.0.0.1:8080/
 repo:
   name: Github
-  url: https://github.com/PurpleKingdomGames/tyrian-docs
+  url: https://github.com/PurpleKingdomGames/tyrian
   editBaseUrl: https://github.com/PurpleKingdomGames/tyrian-docs/blob/main
 discord:
   name: Discord

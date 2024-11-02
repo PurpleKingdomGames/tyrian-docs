@@ -1,6 +1,6 @@
 # Building & Bundling
 
-The JavaScript community don't like to use the word 'compiler', but tools that gather, parse, and link source files into deployable 'bundles' are an essential part of modern web app development.
+The JavaScript community doesn't like to use the word 'compiler', but tools that gather, parse, and link source files into deployable 'bundles' are an essential part of modern web app development.
 
 These tools are called 'bundlers', the most well known of which is probably [Webpack](https://webpack.js.org/). It is beyond the scope of these docs to explain how bundlers work, but they are well documented tools.
 

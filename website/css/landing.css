@@ -1,5 +1,5 @@
 #header-left>img {
-  max-width: 100%;
+  max-width: 50%;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(4px 4px 10px #00000055);
 }

@@ -89,10 +89,25 @@
     <li class="level3 nav-leaf"><a href="guided-tour.html">Guided Example</a></li>
     <li class="level3 nav-leaf"><a href="cmd.html">Commands &amp; Effects</a></li>
     <li class="level3 nav-leaf"><a href="networking.html">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="styles.html">Styles</a></li>
     <li class="level3 nav-leaf"><a href="routing.html">Frontend Routing</a></li>
     <li class="level1 nav-node"><a href="../../examples/">Examples</a></li>
-    <li class="level2 nav-node"><a href="../../examples/demos/">Demos</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/demos/counter/">Counter</a></li>
+    <li class="level2 nav-node"><a href="../../examples/effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/effects/cats-effect/">Cats effect</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/effects/fs2/">Fs2</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/effects/zio/">Zio</a></li>
+    <li class="level2 nav-node"><a href="../../examples/getting-started/">Getting-started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/minimal/">Minimal</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/subcomponents/">Subcomponents</a></li>
+    <li class="level2 nav-node"><a href="../../examples/networking/">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/networking/http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/networking/http4s-dom/">Http4s dom</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/networking/websockets/">Websockets</a></li>
+    <li class="level2 nav-node"><a href="../../examples/svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/svg/clock/">Clock</a></li>
+    <li class="level2 nav-node"><a href="../../examples/ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/ui/field/">Field</a></li>
   </ul>
 
 </nav>
@@ -116,7 +131,7 @@
       <main class="content">
 
         <h1 id="building-bundling" class="title">Building &amp; Bundling</h1>
-        <p>The JavaScript community don&#39;t like to use the word &#39;compiler&#39;, but tools that gather, parse, and link source files into deployable &#39;bundles&#39; are an essential part of modern web app development.</p>
+        <p>The JavaScript community doesn&#39;t like to use the word &#39;compiler&#39;, but tools that gather, parse, and link source files into deployable &#39;bundles&#39; are an essential part of modern web app development.</p>
         <p>These tools are called &#39;bundlers&#39;, the most well known of which is probably <a href="https://webpack.js.org/">Webpack</a>. It is beyond the scope of these docs to explain how bundlers work, but they are well documented tools.</p>
         <p>Tyrian needs bundlers too. We could probably manage without them for our raw app, but sooner or later we&#39;re bound to need images, and style sheets, and font files, and other JS libraries etc., and that&#39;s where bundlers shine.</p>
         <p>Bundlers also give you access to things like dev-servers that feature hot-reloading (i.e. your website refreshes when you re-compile your Tyrian app) which is great during development.</p>

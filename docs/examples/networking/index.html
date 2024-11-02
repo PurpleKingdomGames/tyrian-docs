@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Typelevel Laika + Helium Theme" />
+  <title>Networking</title>
+  
+  
+  <meta name="description" content="Elm-inspired Scala UI library."/>
+  
+  
+  
+  <link rel="icon" sizes="32x32" type="image/png" href="../../img/favicon.png"/>
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:500">
+  
+  <link rel="stylesheet" type="text/css" href="../../helium/site/icofont.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../helium/site/laika-helium.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/custom.css" />
+  <script src="../../helium/site/laika-helium.js"></script>
+  
+  
+  <script> /* for avoiding page load transitions */ </script>
+</head>
+
+  <body>
+
+    <header id="top-bar" class="light-default dark-default">
+
+  <div class="row">
+    <a id="nav-icon">
+      <i class="icofont-laika navigationMenu" title="Navigation">&#xefa2;</i>
+    </a>
+    
+    
+  </div>
+
+  <a class="image-link" href="../../documentation/"><img src="../../img/tyrian-horizontal.svg" alt="Elm-inspired Scala UI library." title="Tyrian" width="150" height="50"></a>
+
+  <div class="row links">
+    
+    <a class="button-link" href="https://purplekingdomgames.github.io/tyrian-docs/demos">Live Demos</a>
+    
+    <a class="button-link" href="https://discord.gg/b5CD47g">Discord</a>
+    
+    <a class="button-link" href="https://github.com/PurpleKingdomGames/tyrian">Github</a>
+    
+  </div>  
+
+</header>
+    
+    <nav id="sidebar">
+
+  <div class="row">
+    
+    <a class="button-link" href="https://purplekingdomgames.github.io/tyrian-docs/demos">Live Demos</a>
+    
+    <a class="button-link" href="https://discord.gg/b5CD47g">Discord</a>
+    
+    <a class="button-link" href="https://github.com/PurpleKingdomGames/tyrian">Github</a>
+    
+  </div>
+
+  <ul class="nav-list">
+    <li class="level1 nav-node"><a href="../../documentation/">Tyrian</a></li>
+    <li class="level2 nav-header">Setup &amp; Configuration</li>
+    <li class="level3 nav-leaf"><a href="../../documentation/installation/quickstart.html">Installation</a></li>
+    <li class="level2 nav-header">Architecture</li>
+    <li class="level3 nav-leaf"><a href="../../documentation/architecture/the-elm-architecture.html">The Elm Architecture</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/architecture/tyrian-and-indigo.html">Tyrian &amp; Indigo</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/architecture/tyrian-vs-elm.html">Tyrian vs Elm</a></li>
+    <li class="level2 nav-header">Information &amp; Trivia</li>
+    <li class="level3 nav-leaf"><a href="../../documentation/information/discussion.html">Discussion</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/information/tyrian-purple.html">Tyrian Purple</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/information/provenance.html">Provenance &amp; Thanks</a></li>
+    <li class="level2 nav-header">Guides</li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/html.html">Rendering HTML</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/bundling.html">Building &amp; Bundling</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/subs.html">Subscriptions</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/goodies.html">&quot;Built-in Goodies&quot;</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/ssr.html">Server-side Rendering &amp; HTMX</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/tyrian-indigo-bridge.html">Tyrian-Indigo Bridge</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/guided-tour.html">Guided Example</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/cmd.html">Commands &amp; Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/networking.html">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/styles.html">Styles</a></li>
+    <li class="level3 nav-leaf"><a href="../../documentation/guides/routing.html">Frontend Routing</a></li>
+    <li class="level1 nav-node"><a href="../">Examples</a></li>
+    <li class="level2 nav-node"><a href="../effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../effects/cats-effect/">Cats effect</a></li>
+    <li class="level3 nav-leaf"><a href="../effects/fs2/">Fs2</a></li>
+    <li class="level3 nav-leaf"><a href="../effects/zio/">Zio</a></li>
+    <li class="level2 nav-node"><a href="../getting-started/">Getting-started</a></li>
+    <li class="level3 nav-leaf"><a href="../getting-started/minimal/">Minimal</a></li>
+    <li class="level3 nav-leaf"><a href="../getting-started/subcomponents/">Subcomponents</a></li>
+    <li class="level2 active nav-node"><a href="#">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="http4s-dom/">Http4s dom</a></li>
+    <li class="level3 nav-leaf"><a href="websockets/">Websockets</a></li>
+    <li class="level2 nav-node"><a href="../svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../svg/clock/">Clock</a></li>
+    <li class="level2 nav-node"><a href="../ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../ui/field/">Field</a></li>
+  </ul>
+
+</nav>
+
+    <div id="container">
+
+      
+<nav id="page-nav">
+  <p class="header"><a href="#">Networking</a></p>
+
+  <ul class="nav-list">
+  </ul>
+
+  <p class="footer"></p>
+</nav>
+
+
+      <main class="content">
+
+        <h1 id="networking" class="title">Networking</h1>
+        <ul>
+          <li><a href="http/">http</a></li>
+        </ul>
+        <ul>
+          <li><a href="http4s-dom/">http4s-dom</a></li>
+        </ul>
+        <ul>
+          <li><a href="websockets/">websockets</a></li>
+        </ul>
+
+        
+<hr class="footer-rule"/>
+<footer>
+  Site generated by <a href="https://typelevel.org/Laika/">Laika</a> with the Helium theme.
+</footer>
+
+
+      </main>
+
+    </div>
+
+  </body>
+
+</html>

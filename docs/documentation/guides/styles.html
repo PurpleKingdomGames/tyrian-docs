@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Typelevel Laika + Helium Theme" />
+  <title>Styles</title>
+  
+  
+  <meta name="description" content="Elm-inspired Scala UI library."/>
+  
+  
+  
+  <link rel="icon" sizes="32x32" type="image/png" href="../../img/favicon.png"/>
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:500">
+  
+  <link rel="stylesheet" type="text/css" href="../../helium/site/icofont.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../helium/site/laika-helium.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/custom.css" />
+  <script src="../../helium/site/laika-helium.js"></script>
+  
+  
+  <script> /* for avoiding page load transitions */ </script>
+</head>
+
+  <body>
+
+    <header id="top-bar" class="light-default dark-default">
+
+  <div class="row">
+    <a id="nav-icon">
+      <i class="icofont-laika navigationMenu" title="Navigation">&#xefa2;</i>
+    </a>
+    
+    
+  </div>
+
+  <a class="image-link" href="../"><img src="../../img/tyrian-horizontal.svg" alt="Elm-inspired Scala UI library." title="Tyrian" width="150" height="50"></a>
+
+  <div class="row links">
+    
+    <a class="button-link" href="https://purplekingdomgames.github.io/tyrian-docs/demos">Live Demos</a>
+    
+    <a class="button-link" href="https://discord.gg/b5CD47g">Discord</a>
+    
+    <a class="button-link" href="https://github.com/PurpleKingdomGames/tyrian">Github</a>
+    
+  </div>  
+
+</header>
+    
+    <nav id="sidebar">
+
+  <div class="row">
+    
+    <a class="button-link" href="https://purplekingdomgames.github.io/tyrian-docs/demos">Live Demos</a>
+    
+    <a class="button-link" href="https://discord.gg/b5CD47g">Discord</a>
+    
+    <a class="button-link" href="https://github.com/PurpleKingdomGames/tyrian">Github</a>
+    
+  </div>
+
+  <ul class="nav-list">
+    <li class="level1 nav-node"><a href="../">Tyrian</a></li>
+    <li class="level2 nav-header">Setup &amp; Configuration</li>
+    <li class="level3 nav-leaf"><a href="../installation/quickstart.html">Installation</a></li>
+    <li class="level2 nav-header">Architecture</li>
+    <li class="level3 nav-leaf"><a href="../architecture/the-elm-architecture.html">The Elm Architecture</a></li>
+    <li class="level3 nav-leaf"><a href="../architecture/tyrian-and-indigo.html">Tyrian &amp; Indigo</a></li>
+    <li class="level3 nav-leaf"><a href="../architecture/tyrian-vs-elm.html">Tyrian vs Elm</a></li>
+    <li class="level2 nav-header">Information &amp; Trivia</li>
+    <li class="level3 nav-leaf"><a href="../information/discussion.html">Discussion</a></li>
+    <li class="level3 nav-leaf"><a href="../information/tyrian-purple.html">Tyrian Purple</a></li>
+    <li class="level3 nav-leaf"><a href="../information/provenance.html">Provenance &amp; Thanks</a></li>
+    <li class="level2 nav-header">Guides</li>
+    <li class="level3 nav-leaf"><a href="html.html">Rendering HTML</a></li>
+    <li class="level3 nav-leaf"><a href="bundling.html">Building &amp; Bundling</a></li>
+    <li class="level3 nav-leaf"><a href="subs.html">Subscriptions</a></li>
+    <li class="level3 nav-leaf"><a href="goodies.html">&quot;Built-in Goodies&quot;</a></li>
+    <li class="level3 nav-leaf"><a href="ssr.html">Server-side Rendering &amp; HTMX</a></li>
+    <li class="level3 nav-leaf"><a href="tyrian-indigo-bridge.html">Tyrian-Indigo Bridge</a></li>
+    <li class="level3 nav-leaf"><a href="guided-tour.html">Guided Example</a></li>
+    <li class="level3 nav-leaf"><a href="cmd.html">Commands &amp; Effects</a></li>
+    <li class="level3 nav-leaf"><a href="networking.html">Networking</a></li>
+    <li class="level3 active nav-leaf"><a href="#">Styles</a></li>
+    <li class="level3 nav-leaf"><a href="routing.html">Frontend Routing</a></li>
+    <li class="level1 nav-node"><a href="../../examples/">Examples</a></li>
+    <li class="level2 nav-node"><a href="../../examples/effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/effects/cats-effect/">Cats effect</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/effects/fs2/">Fs2</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/effects/zio/">Zio</a></li>
+    <li class="level2 nav-node"><a href="../../examples/getting-started/">Getting-started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/minimal/">Minimal</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/subcomponents/">Subcomponents</a></li>
+    <li class="level2 nav-node"><a href="../../examples/networking/">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/networking/http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/networking/http4s-dom/">Http4s dom</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/networking/websockets/">Websockets</a></li>
+    <li class="level2 nav-node"><a href="../../examples/svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/svg/clock/">Clock</a></li>
+    <li class="level2 nav-node"><a href="../../examples/ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/ui/field/">Field</a></li>
+  </ul>
+
+</nav>
+
+    <div id="container">
+
+      
+<nav id="page-nav">
+  <p class="header"><a href="#">Styles</a></p>
+
+  <ul class="nav-list">
+    <li class="level1 nav-leaf"><a href="#bootstrap">Bootstrap</a></li>
+  </ul>
+
+  <p class="footer"></p>
+</nav>
+
+
+      <main class="content">
+
+        <h1 id="styles" class="title">Styles</h1>
+        <p>There are lots of ways to make your Tyrian apps look nicer, see below for an example of <a href="https://getbootstrap.com/docs/3.4/css/">Bootstrap</a>, but there are many others you could try using the same principles, such as <a href="https://tailwindcss.com/docs/installation">TailwindCSS</a>.</p>
+        
+        <h2 id="bootstrap" class="section"><a class="anchor-link left" href="#bootstrap"><i class="icofont-laika link">&#xef71;</i></a>Bootstrap</h2>
+        <p>Install <a href="https://sass-lang.com/">sass css</a> and <a href="https://getbootstrap.com/docs/3.4/css/">Bootstrap</a> in your project:</p>
+        <pre><code>npm install sass
+npm install bootstrap</code></pre>
+        <p>Add a sass CSS file like the one below:</p>
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="identifier">@import</span><span> </span><span class="string-literal">&quot;../node_modules/bootstrap/scss/bootstrap&quot;</span><span>;
+
+$</span><span class="attribute-name">font-stack</span><span>: </span><span class="identifier">Helvetica</span><span>, </span><span class="identifier">sans-serif</span><span>;
+$</span><span class="attribute-name">primary-color</span><span>: </span><span class="number-literal">#333</span><span>;
+
+</span><span class="identifier">body</span><span> {
+  </span><span class="attribute-name">font</span><span>: </span><span class="number-literal">3</span><span class="identifier">em</span><span> $</span><span class="identifier">font-stack</span><span>;
+  </span><span class="attribute-name">color</span><span>: $</span><span class="identifier">primary-color</span><span>;
+}</span></code></pre>
+        <p>Refer to <a href="https://parceljs.org/languages/sass/">your bundler&#39;s documentation</a> for how to include it in your site build pipeline. For example, you may need to include a link to the file in the header of your HTML page:</p>
+        <p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./scss/custom.scss&quot;&gt;</code></p>
+        <p>Make use of the imported / available styles in your Scala based HTML:</p>
+        <pre><code class="nohighlight"><span>  </span><span class="keyword">def</span><span> </span><span class="declaration-name">view</span><span>(</span><span class="identifier">model</span><span>: </span><span class="type-name">Model</span><span>): </span><span class="type-name">Html</span><span>[</span><span class="type-name">Msg</span><span>] =
+    </span><span class="identifier">div</span><span>(</span><span class="identifier">`class`</span><span> := </span><span class="string-literal">&quot;container&quot;</span><span>)(
+      </span><span class="identifier">div</span><span>(</span><span class="identifier">`class`</span><span> := </span><span class="string-literal">&quot;row&quot;</span><span>)(
+        </span><span class="identifier">div</span><span>(</span><span class="identifier">`class`</span><span> := </span><span class="string-literal">&quot;col bodyText&quot;</span><span>, </span><span class="identifier">styles</span><span>(</span><span class="string-literal">&quot;text-align&quot;</span><span> -&gt; </span><span class="string-literal">&quot;right&quot;</span><span>))(
+          </span><span class="identifier">button</span><span>(</span><span class="identifier">onClick</span><span>(</span><span class="type-name">Msg</span><span>.</span><span class="type-name">Decrement</span><span>))(</span><span class="identifier">text</span><span>(</span><span class="string-literal">&quot;-&quot;</span><span>))
+        ),
+        </span><span class="identifier">div</span><span>(</span><span class="identifier">`class`</span><span> := </span><span class="string-literal">&quot;col bodyText&quot;</span><span>, </span><span class="identifier">styles</span><span>(</span><span class="string-literal">&quot;text-align&quot;</span><span> -&gt; </span><span class="string-literal">&quot;center&quot;</span><span>))(
+          </span><span class="identifier">text</span><span>(</span><span class="identifier">model</span><span>.</span><span class="identifier">toString</span><span>)
+        ),
+        </span><span class="identifier">div</span><span>(</span><span class="identifier">`class`</span><span> := </span><span class="string-literal">&quot;col bodyText&quot;</span><span>, </span><span class="identifier">styles</span><span>(</span><span class="string-literal">&quot;text-align&quot;</span><span> -&gt; </span><span class="string-literal">&quot;left&quot;</span><span>))(
+          </span><span class="identifier">button</span><span>(</span><span class="identifier">onClick</span><span>(</span><span class="type-name">Msg</span><span>.</span><span class="type-name">Increment</span><span>))(</span><span class="identifier">text</span><span>(</span><span class="string-literal">&quot;+&quot;</span><span>))
+        )
+      )
+    )</span></code></pre>
+
+        
+<hr class="footer-rule"/>
+<footer>
+  Site generated by <a href="https://typelevel.org/Laika/">Laika</a> with the Helium theme.
+</footer>
+
+
+      </main>
+
+    </div>
+
+  </body>
+
+</html>

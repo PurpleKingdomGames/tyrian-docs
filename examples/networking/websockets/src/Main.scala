@@ -76,9 +76,6 @@ object Model:
   val init: Model =
     Model(EchoSocket.init, Nil)
 
-/** Encapsulates and manages our socket connection, cleanly proxies methods, and knows how to draw the right
-  * connnect/disconnect button.
-  */
 final case class EchoSocket(socketUrl: String, socket: Option[WebSocket[IO]]):
 
   def connectDisconnectButton =

@@ -16,10 +16,14 @@ website:
   latestRelease: 0.11.0
   baseUrl: https://purplekingdomgames.github.io/tyrian-docs/
   # baseUrl: http://127.0.0.1:8080/
+docsRepo:
+  name: Docs
+  url: https://github.com/PurpleKingdomGames/tyrian-docs
+  editBaseUrl: https://github.com/PurpleKingdomGames/tyrian-docs/blob/main
 repo:
   name: Github
   url: https://github.com/PurpleKingdomGames/tyrian
-  editBaseUrl: https://github.com/PurpleKingdomGames/tyrian-docs/blob/main
+  editBaseUrl: https://github.com/PurpleKingdomGames/tyrian/blob/main
 discord:
   name: Discord
   url: https://discord.gg/b5CD47g

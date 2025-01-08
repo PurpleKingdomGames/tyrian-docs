@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Typelevel Laika + Helium Theme" />
-  <title>Tyrian vs Elm</title>
+  <title>Tyrian & Flowbite Template</title>
   
   
   <meta name="description" content="Elm-inspired Scala UI library."/>
@@ -70,12 +70,12 @@
   <ul class="nav-list">
     <li class="level1 nav-node"><a href="../">Tyrian</a></li>
     <li class="level2 nav-header">Setup &amp; Configuration</li>
-    <li class="level3 nav-leaf"><a href="../installation/quickstart.html">Installation</a></li>
-    <li class="level3 nav-leaf"><a href="../installation/tyrian-flowbite-template.html">Tyrian &amp; Flowbite Template</a></li>
+    <li class="level3 nav-leaf"><a href="quickstart.html">Installation</a></li>
+    <li class="level3 active nav-leaf"><a href="#">Tyrian &amp; Flowbite Template</a></li>
     <li class="level2 nav-header">Architecture</li>
-    <li class="level3 nav-leaf"><a href="the-elm-architecture.html">The Elm Architecture</a></li>
-    <li class="level3 nav-leaf"><a href="tyrian-and-indigo.html">Tyrian &amp; Indigo</a></li>
-    <li class="level3 active nav-leaf"><a href="#">Tyrian vs Elm</a></li>
+    <li class="level3 nav-leaf"><a href="../architecture/the-elm-architecture.html">The Elm Architecture</a></li>
+    <li class="level3 nav-leaf"><a href="../architecture/tyrian-and-indigo.html">Tyrian &amp; Indigo</a></li>
+    <li class="level3 nav-leaf"><a href="../architecture/tyrian-vs-elm.html">Tyrian vs Elm</a></li>
     <li class="level2 nav-header">Information &amp; Trivia</li>
     <li class="level3 nav-leaf"><a href="../information/discussion.html">Discussion</a></li>
     <li class="level3 nav-leaf"><a href="../information/tyrian-purple.html">Tyrian Purple</a></li>
@@ -118,9 +118,10 @@
 
       
 <nav id="page-nav">
-  <p class="header"><a href="#">Tyrian vs Elm</a></p>
+  <p class="header"><a href="#">Tyrian &amp; Flowbite Template</a></p>
 
   <ul class="nav-list">
+    <li class="level1 nav-leaf"><a href="#quick-start">Quick Start</a></li>
   </ul>
 
   <p class="footer"></p>
@@ -129,22 +130,16 @@
 
       <main class="content">
 
-        <h1 id="tyrian-vs-elm" class="title">Tyrian vs Elm</h1>
-        <p>As you might expect, Elm is a far richer offering that Tyrian is now, and in all likelihood ever will be. It&#39;s been around a lot longer, and there are a lot more people working on and with Elm every day feeding into it&#39;s design.</p>
-        <p>Having said that: While Elm&#39;s architecture has taken on a life of it&#39;s own and influenced the state of the art of functional (and even non-FP!) UI programming, Elm itself has remained somewhat niche.</p>
-        <p>People tend to love Elm ...or hate it. A lot of that reaction can be attributed to the fact that Elm is a very opinionated language, and you either like that or you do not.</p>
-        <p>What Elm&#39;s opinionated stance buys you is an ecosystem where if your code compiles, it works! And that is an amazing thing! In the cost/benefit analysis: The benefit is an incredibly robust web development experience, at the cost of literally not being able to do anything that is not permitted (because it would break the robustness guarantees of the ecosystem).</p>
-        <p>Tyrian takes the glorious essence of Elm&#39;s architecture, but removes almost all of the opinions ...and with it of course, almost all of the safety nets!</p>
-        <ul>
-          <li>Want to break up your code into lots of files and classes? Carry on.</li>
-          <li>Want to use refined types? Ok then.</li>
-          <li>Want to use Typeclasses? No problem.</li>
-          <li>Want to bring in a heavyweight FP library? Sure thing.</li>
-          <li>Want to talk to JavaScript directly over an FFI? Go nuts.</li>
-          <li>Want to do a non-exhaustive match? I mean, you can but...</li>
-          <li>Want to throw a massive exception? ...erm ...sure...</li>
-        </ul>
-        <p>Be safe out there folks! 😀</p>
+        <h1 id="tyrian-flowbite-template" class="title">Tyrian &amp; Flowbite Template</h1>
+        <p>A full-fledged Tyrian template with Flowbite components.</p>
+        
+        <h2 id="quick-start" class="section"><a class="anchor-link left" href="#quick-start"><i class="icofont-laika link">&#xef71;</i></a>Quick Start</h2>
+        <ol class="arabic">
+          <li>Create a new project folder and navigate into it.</li>
+          <li>Run the following command to set up your project:</li>
+        </ol>
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span>sbt new linux-root/tyrian-flowbite.g</span><span class="number-literal">8</span></code></pre>
+        <p>For more details, visit the <a href="https://github.com/linux-root/tyrian-flowbite.g8">repository</a>.</p>
 
         
 <hr class="footer-rule"/>

@@ -22,7 +22,7 @@ Tyrian is a Scala 3 Web UI library, so please set your Scala version to `@SCALA_
 
 Please note that both the sbt and Mill instructions below assume you intend to work with some sort of web packager/bundler, and therefore emit common js modules.
 
-The [examples in the Tyrian repo](https://github.com/PurpleKingdomGames/tyrian/tree/main/examples) almost all use [Parcel.js](https://parceljs.org/) as the bundler.
+The [examples in the Tyrian repo](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/examples) almost all use [Parcel.js](https://parceljs.org/) as the bundler.
 
 ### sbt
 

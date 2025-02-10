@@ -12,13 +12,13 @@ Bundlers also give you access to things like dev-servers that feature hot-reload
 
 ### Parcel.js
 
-[Most of our examples](https://github.com/PurpleKingdomGames/tyrian/tree/main/examples) use [Parcel.js](https://parceljs.org/). This is because Webpack is very config heavy, while Parcel is almost zero config. In practical terms this means that Parcel is very quick to get up and running, but if you find a corner case then sourcing a workaround can be tricky. Webpack on the other hand looks to have configuration and plugins for pretty much anything you can think of, and an increased learning curve to go with it.
+[Most of our examples](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/examples) use [Parcel.js](https://parceljs.org/). This is because Webpack is very config heavy, while Parcel is almost zero config. In practical terms this means that Parcel is very quick to get up and running, but if you find a corner case then sourcing a workaround can be tricky. Webpack on the other hand looks to have configuration and plugins for pretty much anything you can think of, and an increased learning curve to go with it.
 
 ### scalajs-bundler
 
 I've already mentioned that Webpack is the most well known bundler, and Scala.js has an sbt based bundler called [scalajs-bundler](https://scalacenter.github.io/scalajs-bundler/) that uses Webpack under the covers.
 
-We have a standalone [example of using Tyrian with scalajs-bundler](https://github.com/PurpleKingdomGames/tyrian/tree/main/examples/bundler) you can look at, and we also use it in our [server based example](https://github.com/PurpleKingdomGames/tyrian/tree/main/examples/server-examples).
+We have a standalone [example of using Tyrian with scalajs-bundler](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/integration-examples/bundler) you can look at, and we also use it in our [server based example](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/integration-examples/server-examples).
 
 #### Converting from Parcel.js to scalajs-bundler
 

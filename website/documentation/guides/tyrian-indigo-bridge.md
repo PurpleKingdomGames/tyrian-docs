@@ -14,7 +14,7 @@ Both use the same language... both use the same idioms... why not join them toge
 
 ## Runnable Example
 
-Rather than go into all the details of how it works, there is an [example](https://github.com/PurpleKingdomGames/tyrian/tree/main/examples) you can look at the demonstrates how the two can seamlessly communicate using lovely native Scala types.
+Rather than go into all the details of how it works, there is an [example](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/examples) you can look at the demonstrates how the two can seamlessly communicate using lovely native Scala types.
 
 > Note that the example is quite simple and just uses `String` as it's message format, but you can use whatever suits your needs.
 

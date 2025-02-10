@@ -72,4 +72,4 @@ enum MyMsg:
 Random.double[IO].map(next => MyMsg.MyRandom(next.value))
 ```
 
-These are simple examples, but there are much more complicated uses for commands. One great use of commands is for making [HTTP requests where the response is decoded into a `Msg`.](https://github.com/PurpleKingdomGames/tyrian/tree/main/examples)
+These are simple examples, but there are much more complicated uses for commands. One great use of commands is for making [HTTP requests where the response is decoded into a `Msg`.](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/examples/networking/http)

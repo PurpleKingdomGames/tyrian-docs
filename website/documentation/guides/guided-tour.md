@@ -12,7 +12,7 @@ The example is comprised of two buttons, `+` and `-`, and some text that shows a
 
 ### Counter Code
 
-The version of this in the [examples](https://github.com/PurpleKingdomGames/tyrian/tree/main/examples) is already quite lean, but the version below has been stripped back to the minimum.
+The version of this in the [examples](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/examples/effects/cats-effect) is already quite lean, but the version below has been stripped back to the minimum.
 
 ```scala mdoc:js
 import tyrian.Html.*

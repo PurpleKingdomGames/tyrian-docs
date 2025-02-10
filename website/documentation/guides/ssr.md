@@ -75,7 +75,7 @@ As you can see, this is completely ordinary Scala, which means you can do anythi
 
 The `.render` extension method is not strictly necessary since this is now the behaviour of calling `.toString` on a tag.
 
-There is an example of SRR in the [server-examples](https://github.com/PurpleKingdomGames/tyrian/tree/main/examples).
+There is an example of SRR in the [server-examples](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/integration-examples/server-examples).
 
 ## What is HTMX?
 

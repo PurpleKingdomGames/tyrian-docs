@@ -6,14 +6,14 @@ import sbtwelcome._
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
 lazy val tyrianVersion = TyrianVersion.getVersion
-lazy val scala3Version = "3.5.0"
+lazy val scala3Version = "3.6.3"
 
 lazy val commonSettings: Seq[sbt.Def.Setting[_]] = Seq(
   version      := tyrianVersion,
   scalaVersion := scala3Version,
   organization := "io.indigoengine",
   libraryDependencies ++= Seq(
-    "org.scalameta" %%% "munit" % "0.7.29" % Test
+    "org.scalameta" %%% "munit" % "1.1.0" % Test
   ),
   libraryDependencies ++= Seq(
     "io.indigoengine" %%% "tyrian-io" % tyrianVersion
@@ -67,7 +67,7 @@ lazy val http =
       libraryDependencies ++= Seq(
         "io.circe" %%% "circe-core",
         "io.circe" %%% "circe-parser"
-      ).map(_ % "0.14.5")
+      ).map(_ % "0.14.10")
     )
 
 lazy val http4sdom =
@@ -80,12 +80,12 @@ lazy val http4sdom =
         "io.circe" %%% "circe-core",
         "io.circe" %%% "circe-parser",
         "io.circe" %%% "circe-generic"
-      ).map(_ % "0.14.5")
+      ).map(_ % "0.14.10")
     )
     .settings(
       libraryDependencies ++= Seq(
-        "org.http4s" %%% "http4s-dom"   % "0.2.7",
-        "org.http4s" %%% "http4s-circe" % "0.23.18"
+        "org.http4s" %%% "http4s-dom"   % "0.2.11",
+        "org.http4s" %%% "http4s-circe" % "0.23.30"
       )
     )
 

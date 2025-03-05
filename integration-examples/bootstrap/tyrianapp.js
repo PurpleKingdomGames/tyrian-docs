@@ -1,3 +1,3 @@
-import { TyrianApp } from "./target/scala-3.5.0/bootstrap-fastopt/main.js";
+import { TyrianApp } from "./target/scala-3.6.3/bootstrap-fastopt/main.js";
 
 TyrianApp.launch("myapp");

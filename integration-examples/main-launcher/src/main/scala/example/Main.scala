@@ -1,6 +1,5 @@
 package example
 
-import cats.effect.IO
 import tyrian.*
 
 object Main {

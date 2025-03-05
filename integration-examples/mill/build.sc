@@ -4,13 +4,10 @@ import mill.scalalib._
 import mill.scalajslib._
 import mill.scalajslib.api._
 
-import $ivy.`io.github.davidgregory084::mill-tpolecat::0.3.5`
-import io.github.davidgregory084.TpolecatModule
+object counter extends ScalaJSModule {
 
-object counter extends ScalaJSModule with TpolecatModule {
-
-  def scalaVersion   = "3.4.1"
-  def scalaJSVersion = "1.16.0"
+  def scalaVersion   = "3.6.3"
+  def scalaJSVersion = "1.18.2"
 
   def buildSite() =
     T.command {
@@ -29,7 +26,7 @@ object counter extends ScalaJSModule with TpolecatModule {
 
   object test extends ScalaJSTests {
     def ivyDeps = Agg(
-      ivy"org.scalameta::munit::0.7.29"
+      ivy"org.scalameta::munit::1.1.0"
     )
 
     def testFramework = "munit.Framework"

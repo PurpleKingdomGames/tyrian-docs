@@ -1,3 +1,3 @@
-import { TyrianApp } from "./target/scala-3.5.0/electron-fastopt/main.js";
+import { TyrianApp } from "./target/scala-3.6.3/electron-fastopt/main.js";
 
 TyrianApp.launch("myapp");

@@ -16,7 +16,7 @@ object examples extends mill.Module {
       override def ivyDeps =
         Agg(
           ivy"io.indigoengine::tyrian-zio::$tyrianVersion",
-          ivy"dev.zio::zio-interop-cats::23.0.0.5"
+          ivy"dev.zio::zio-interop-cats::23.1.0.3"
         )
     }
 
@@ -35,19 +35,19 @@ object examples extends mill.Module {
       override def ivyDeps =
         super.ivyDeps() ++
           Agg(
-            ivy"io.circe::circe-core::0.14.5",
-            ivy"io.circe::circe-parser::0.14.5"
+            ivy"io.circe::circe-core::0.14.10",
+            ivy"io.circe::circe-parser::0.14.10"
           )
     }
     object `http4s-dom` extends examplemodule.ExampleModule {
       override def ivyDeps =
         super.ivyDeps() ++
           Agg(
-            ivy"org.http4s::http4s-dom::0.2.7",
-            ivy"org.http4s::http4s-circe::0.23.18",
-            ivy"io.circe::circe-core::0.14.5",
-            ivy"io.circe::circe-parser::0.14.5",
-            ivy"io.circe::circe-generic::0.14.5"
+            ivy"org.http4s::http4s-dom::0.2.11",
+            ivy"org.http4s::http4s-circe::0.23.30",
+            ivy"io.circe::circe-core::0.14.10",
+            ivy"io.circe::circe-parser::0.14.10",
+            ivy"io.circe::circe-generic::0.14.10"
           )
     }
     object websockets extends examplemodule.ExampleModule

@@ -1,14 +1,14 @@
 import scala.sys.process._
 import scala.language.postfixOps
 
-val Http4sVersion          = "0.23.6"
-val CirceVersion           = "0.14.5"
-val MunitVersion           = "0.7.29"
+val Http4sVersion          = "0.23.30"
+val CirceVersion           = "0.14.10"
+val MunitVersion           = "1.1.0"
 val LogbackVersion         = "1.2.6"
-val MunitCatsEffectVersion = "1.0.6"
+val MunitCatsEffectVersion = "1.0.7"
 
 lazy val tyrianVersion = TyrianVersion.getVersion
-lazy val scala3Version = "3.5.0"
+lazy val scala3Version = "3.6.3"
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 

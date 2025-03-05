@@ -1,33 +1,31 @@
 package com.example.example
 
-import cats.Applicative
-import cats.implicits.*
+import cats.effect.IO
 import tyrian.*
 import tyrian.Html.*
 
-trait SSR[F[_]]:
-  def render(n: SSR.Input): F[SSR.Output]
-  def render: F[SSR.Output]
+trait SSR:
+  def render(n: SSR.Input): IO[SSR.Output]
+  def render: IO[SSR.Output]
 
 object SSR:
-  implicit def apply[F[_]](using ev: SSR[F]): SSR[F] = ev
 
   val styles  = style(CSS.`font-family`("Arial, Helvetica, sans-serif"))
   val topLine = p(b(text("HTML fragment rendered by Tyrian on the server.")))
 
-  def impl[F[_]: Applicative]: SSR[F] = new SSR[F]:
-    def render(in: SSR.Input): F[SSR.Output] =
+  def impl: SSR = new SSR:
+    def render(in: SSR.Input): IO[SSR.Output] =
       val html =
         div(styles)(
           topLine,
           p(text("Was sent the following: " + in.toString))
         ).render
 
-      SSR.Output(html).pure[F]
+      IO.pure(SSR.Output(html))
 
-    def render: F[SSR.Output] =
+    def render: IO[SSR.Output] =
       val html = div(styles)(topLine).render
-      SSR.Output(html).pure[F]
+      IO.pure(SSR.Output(html))
 
   opaque type Input = String
   object Input:

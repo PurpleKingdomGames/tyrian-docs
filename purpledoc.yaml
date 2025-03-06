@@ -13,7 +13,7 @@ website:
     height: 50.0
   logo:
     image: tyrian.svg
-  latestRelease: 0.12.0
+  latestRelease: 0.13.0
   baseUrl: https://purplekingdomgames.github.io/tyrian-docs/
   # baseUrl: http://127.0.0.1:8080/
 docsRepo:

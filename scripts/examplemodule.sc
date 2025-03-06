@@ -30,7 +30,7 @@ trait ExampleModule extends ScalaJSModule {
     flags.filterNot(_ == "-Wunused:locals")
   }
 
-  val tyrianVersion = "0.12.1-SNAPSHOT"
+  val tyrianVersion = "0.13.0"
 
   def ivyDeps =
     Agg(

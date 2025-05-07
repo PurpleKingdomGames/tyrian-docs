@@ -6,8 +6,8 @@ import mill.scalajslib.api._
 import $ivy.`org.typelevel::scalac-options:0.1.7`, org.typelevel.scalacoptions._
 
 trait ExampleModule extends ScalaJSModule {
-  def scalaVersion   = "3.6.3"
-  def scalaJSVersion = "1.18.2"
+  def scalaVersion   = "3.6.4"
+  def scalaJSVersion = "1.19.0"
 
   override def scalacOptions = T {
     val flags = super.scalacOptions() ++
@@ -30,7 +30,7 @@ trait ExampleModule extends ScalaJSModule {
     flags.filterNot(_ == "-Wunused:locals")
   }
 
-  val tyrianVersion = "0.13.0"
+  val tyrianVersion = "0.14.0"
 
   def ivyDeps =
     Agg(
@@ -41,7 +41,7 @@ trait ExampleModule extends ScalaJSModule {
 
   object test extends ScalaJSTests {
     def ivyDeps = Agg(
-      ivy"org.scalameta::munit::1.1.0"
+      ivy"org.scalameta::munit::1.1.1"
     )
 
     override def moduleKind = T(mill.scalajslib.api.ModuleKind.CommonJSModule)

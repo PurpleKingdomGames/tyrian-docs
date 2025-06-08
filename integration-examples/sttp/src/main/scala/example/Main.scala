@@ -66,6 +66,8 @@ enum Msg:
 
 object SttpHelper:
 
+ val TimeAPIDefaultIP = MyIP("237.71.232.203")
+
   def fetchTime[F[_]: Async]: Cmd[F, Msg] = {
     val backend   = FetchCatsBackend[F]()
 
@@ -79,7 +81,7 @@ object SttpHelper:
 
     val httpCalls = for {
       response1 <- backend.send(request1).map(_.body).map{
-        case Left(_) => MyIP("237.71.232.203") //Fallback IP Address
+        case Left(_) => TimeAPIDefaultIP     
         case Right(myIP) => myIP
       }
 

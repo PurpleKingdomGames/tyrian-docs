@@ -48,4 +48,4 @@ metals.sbt
 .direnv
 .envrc
 
-integration-examples/sttp/.parcel-cache
+.parcel-cache

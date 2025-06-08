@@ -98,7 +98,7 @@ lazy val sttp =
       libraryDependencies ++= Seq(
         "io.circe" %%% "circe-core",
         "io.circe" %%% "circe-generic"
-      ).map(_ % "0.14.5")
+      ).map(_ % "0.14.13")
     )
     .settings(
       libraryDependencies ++= Seq(

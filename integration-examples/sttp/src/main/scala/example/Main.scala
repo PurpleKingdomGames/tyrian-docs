@@ -9,7 +9,6 @@ import sttp.client4.circe.*
 import io.circe.generic.auto.*
 import cats.effect.kernel.Async
 import cats.implicits.*
-
 import scala.scalajs.js.annotation.*
 
 @JSExportTopLevel("TyrianApp")
@@ -86,7 +85,7 @@ enum Msg:
 
 object SttpHelper:
 
-  val TimeAPIDefaultIP = MyIP("237.71.232.203")
+  private val TimeAPIDefaultIP = MyIP("237.71.232.203")
 
   def fetchTime[F[_]: Async]: Cmd[F, Msg] = {
     val backend = FetchCatsBackend[F]()

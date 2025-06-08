@@ -23,14 +23,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 200px;
+      width: 350px;
+      height: 250px;
       padding: 1.5rem;
       background: #181c20;
       border-radius: 1rem;
       box-shadow: 0 2px 16px rgba(0,0,0,0.1);
-      max-width: 350px;
       margin: 2rem auto;
       color: #f8f8f8;
+      position: relative;
     }
     .clock-loading {
       font-size: 1.5rem;
@@ -76,6 +77,19 @@
       background: #0096c7;
       transform: scale(0.96);
       box-shadow: 0 2px 8px rgba(0, 150, 199, 0.18);
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #e0e0e0;
+      border-top: 5px solid #00b4d8;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      z-index: 11;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>

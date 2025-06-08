@@ -51,9 +51,9 @@ object Main extends TyrianIOApp[Msg, Model]:
     Sub.None
 
 
-case class TimeData(dayOfWeek: String, timeZone: String, year: Int, month: Int, day: Int, hour: Int, minute: Int, seconds: Int)
-case class MyIP(ip: String)
-case class Model(data: Option[(TimeData, MyIP)])
+final case class TimeData(dayOfWeek: String, timeZone: String, year: Int, month: Int, day: Int, hour: Int, minute: Int, seconds: Int)
+final case class MyIP(ip: String)
+final case class Model(data: Option[(TimeData, MyIP)])
 
 object Model:
   val init: Model =

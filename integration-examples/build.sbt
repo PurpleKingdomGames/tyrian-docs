@@ -67,7 +67,9 @@ lazy val http =
       libraryDependencies ++= Seq(
         "io.circe" %%% "circe-core",
         "io.circe" %%% "circe-parser"
-      ).map(_ % "0.14.10")
+      ).map(
+        _ % "0.14.10"
+      ) :+ "com.softwaremill.sttp.client4" %%% "core" % "4.0.8"
     )
 
 lazy val http4sdom =
@@ -87,6 +89,26 @@ lazy val http4sdom =
         "org.http4s" %%% "http4s-dom"   % "0.2.11",
         "org.http4s" %%% "http4s-circe" % "0.23.30"
       )
+    )
+
+lazy val sttp =
+  (project in file("sttp"))
+    .enablePlugins(ScalaJSPlugin)
+    .settings(commonSettings: _*)
+    .settings(
+      name := "sttp",
+      libraryDependencies ++= Seq(
+        "io.circe" %%% "circe-core",
+        "io.circe" %%% "circe-parser",
+        "io.circe" %%% "circe-generic"
+      ).map(_ % "0.14.5")
+    )
+    .settings(
+      libraryDependencies ++= Seq(
+        "com.softwaremill.sttp.client4" %%% "core",
+        "com.softwaremill.sttp.client4" %%% "cats",
+        "com.softwaremill.sttp.client4" %%% "circe"
+      ).map(_ % "4.0.8")
     )
 
 lazy val mainlauncher =
@@ -127,6 +149,7 @@ lazy val exampleProjects: List[String] =
     "electron",
     "http",
     "http4sdom",
+    "sttp",
     "mainlauncher",
     "nonpm",
     "tailwind",
@@ -149,7 +172,9 @@ lazy val tyrianExamplesProject =
       name := "TyrianExamples"
     )
     .settings(
-      logo := s"Tyrian Examples (v${version.value}):\n" + exampleProjects.map(s => " - " + s).mkString("\n") + "\n",
+      logo := s"Tyrian Examples (v${version.value}):\n" + exampleProjects
+        .map(s => " - " + s)
+        .mkString("\n") + "\n",
       usefulTasks := Seq(
         UsefulTask("cleanAll", "Cleans all examples").noAlias,
         UsefulTask("compileAll", "Compiles all examples").noAlias,

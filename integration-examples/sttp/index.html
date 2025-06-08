@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tyrian Http Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    }
+    .main-bg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    }
+    .clock-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      padding: 1.5rem;
+      background: #181c20;
+      border-radius: 1rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+      max-width: 350px;
+      margin: 2rem auto;
+      color: #f8f8f8;
+    }
+    .clock-loading {
+      font-size: 1.5rem;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+    .clock-time {
+      font-family: 'SF Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+      font-size: 3rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .clock-date {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .clock-tz {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #a0e7e5;
+    }
+    .clock-ip {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #ffd166;
+    }
+    .btn {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 0.5rem;
+      background: #00b4d8;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    }
+    .btn:hover {
+      background: #48cae4;
+      box-shadow: 0 4px 16px rgba(0, 180, 216, 0.15);
+    }
+    .btn:active {
+      background: #0096c7;
+      transform: scale(0.96);
+      box-shadow: 0 2px 8px rgba(0, 150, 199, 0.18);
+    }
+  </style>
+</head>
+</head>
+
+<body>
+  <div id="myapp"></div>
+  <script type="module" src="./tyrianapp.js"></script>
+</body>
+
+</html>

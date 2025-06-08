@@ -67,9 +67,7 @@ lazy val http =
       libraryDependencies ++= Seq(
         "io.circe" %%% "circe-core",
         "io.circe" %%% "circe-parser"
-      ).map(
-        _ % "0.14.10"
-      ) :+ "com.softwaremill.sttp.client4" %%% "core" % "4.0.8"
+      ).map(_ % "0.14.10")
     )
 
 lazy val http4sdom =
@@ -99,7 +97,6 @@ lazy val sttp =
       name := "sttp",
       libraryDependencies ++= Seq(
         "io.circe" %%% "circe-core",
-        "io.circe" %%% "circe-parser",
         "io.circe" %%% "circe-generic"
       ).map(_ % "0.14.5")
     )

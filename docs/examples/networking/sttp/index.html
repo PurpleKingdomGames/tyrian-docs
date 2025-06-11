@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Typelevel Laika + Helium Theme" />
+  <title>Sttp</title>
+  
+  
+  <meta name="description" content="Elm-inspired Scala UI library."/>
+  
+  
+  
+  <link rel="icon" sizes="32x32" type="image/png" href="../../../img/favicon.png"/>
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:500">
+  
+  <link rel="stylesheet" type="text/css" href="../../../helium/site/icofont.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../helium/site/laika-helium.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/custom.css" />
+  <script src="../../../helium/site/laika-helium.js"></script>
+  
+  
+  <script> /* for avoiding page load transitions */ </script>
+</head>
+
+  <body>
+
+    <header id="top-bar" class="light-default dark-default">
+
+  <div class="row">
+    <a id="nav-icon">
+      <i class="icofont-laika navigationMenu" title="Navigation">&#xefa2;</i>
+    </a>
+    
+    
+  </div>
+
+  <a class="image-link" href="../../../documentation/"><img src="../../../img/tyrian-horizontal.svg" alt="Elm-inspired Scala UI library." title="Tyrian" width="150" height="50"></a>
+
+  <div class="row links">
+    
+    <a class="button-link" href="https://purplekingdomgames.github.io/tyrian-docs/live_demos">Live Demos</a>
+    
+    <a class="button-link" href="https://discord.gg/b5CD47g">Discord</a>
+    
+    <a class="button-link" href="https://github.com/PurpleKingdomGames/tyrian">Github</a>
+    
+  </div>  
+
+</header>
+    
+    <nav id="sidebar">
+
+  <div class="row">
+    
+    <a class="button-link" href="https://purplekingdomgames.github.io/tyrian-docs/live_demos">Live Demos</a>
+    
+    <a class="button-link" href="https://discord.gg/b5CD47g">Discord</a>
+    
+    <a class="button-link" href="https://github.com/PurpleKingdomGames/tyrian">Github</a>
+    
+  </div>
+
+  <ul class="nav-list">
+    <li class="level1 nav-node"><a href="../../../documentation/">Tyrian</a></li>
+    <li class="level2 nav-header">Setup &amp; Configuration</li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/installation/quickstart.html">Installation</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/installation/tyrian-flowbite-template.html">Tyrian &amp; Flowbite Template</a></li>
+    <li class="level2 nav-header">Architecture</li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/architecture/the-elm-architecture.html">The Elm Architecture</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/architecture/tyrian-and-indigo.html">Tyrian &amp; Indigo</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/architecture/tyrian-vs-elm.html">Tyrian vs Elm</a></li>
+    <li class="level2 nav-header">Information &amp; Trivia</li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/information/discussion.html">Discussion</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/information/tyrian-purple.html">Tyrian Purple</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/information/provenance.html">Provenance &amp; Thanks</a></li>
+    <li class="level2 nav-header">Guides</li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/html.html">Rendering HTML</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/bundling.html">Building &amp; Bundling</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/subs.html">Subscriptions</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/goodies.html">&quot;Built-in Goodies&quot;</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/ssr.html">Server-side Rendering &amp; HTMX</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/tyrian-indigo-bridge.html">Tyrian-Indigo Bridge</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/guided-tour.html">Guided Example</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/cmd.html">Commands &amp; Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/networking.html">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/styles.html">Styles</a></li>
+    <li class="level3 nav-leaf"><a href="../../../documentation/guides/routing.html">Frontend Routing</a></li>
+    <li class="level2 nav-leaf"><a href="../../../documentation/integration-examples.html">Integration-Examples</a></li>
+    <li class="level1 nav-node"><a href="../../">Examples</a></li>
+    <li class="level2 nav-node"><a href="../../effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../effects/cats-effect/">Cats Effect</a></li>
+    <li class="level3 nav-leaf"><a href="../../effects/fs2/">FS2</a></li>
+    <li class="level3 nav-leaf"><a href="../../effects/zio/">ZIO</a></li>
+    <li class="level2 nav-node"><a href="../../getting-started/">Getting-started</a></li>
+    <li class="level3 nav-leaf"><a href="../../getting-started/minimal/">Minimal Setup</a></li>
+    <li class="level3 nav-leaf"><a href="../../getting-started/subcomponents/">Sub-Components</a></li>
+    <li class="level2 nav-node"><a href="../">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="../http4s-dom/">Http4s-Dom</a></li>
+    <li class="level3 active nav-leaf"><a href="#">Sttp</a></li>
+    <li class="level3 nav-leaf"><a href="../websockets/">WebSockets</a></li>
+    <li class="level2 nav-node"><a href="../../svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../../svg/clock/">Clock SVG</a></li>
+    <li class="level2 nav-node"><a href="../../ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../../ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../../ui/field/">Input Field</a></li>
+  </ul>
+
+</nav>
+
+    <div id="container">
+
+      
+<nav id="page-nav">
+  <p class="header"><a href="#">Sttp</a></p>
+
+  <ul class="nav-list">
+    <li class="level1 nav-leaf"><a href="#example-links">Example Links</a></li>
+    <li class="level1 nav-leaf"><a href="#example-using-sttp-http-client-with-tyrian">Example: Using sttp HTTP client with Tyrian</a></li>
+  </ul>
+
+  <p class="footer"></p>
+</nav>
+
+
+      <main class="content">
+
+        <h1 id="sttp" class="title">Sttp</h1>
+        
+        <h2 id="example-links" class="section"><a class="anchor-link left" href="#example-links"><i class="icofont-laika link">&#xef71;</i></a>Example Links</h2>
+        <ul>
+          <li><a href="https://github.com/PurpleKingdomGames/tyrian-docs/blob/main/examples/networking/sttp">View example code</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://purplekingdomgames.github.io/tyrian-docs//live_demos/examples/networking/sttp/">Live demo</a></li>
+        </ul>
+        
+        <h2 id="example-using-sttp-http-client-with-tyrian" class="section"><a class="anchor-link left" href="#example-using-sttp-http-client-with-tyrian"><i class="icofont-laika link">&#xef71;</i></a>Example: Using sttp HTTP client with Tyrian</h2>
+        <p>This example demonstrates how to integrate the sttp HTTP client into a
+        Tyrian application. It shows how to:</p>
+        <ul>
+          <li>Fetch the user&#39;s public IP address and current time data from external
+          APIs.</li>
+          <li>Manage asynchronous effects and loading state using Tyrian&#39;s Cmd and
+          message system.</li>
+          <li>Display loading indicators, error messages, and fetched data in a
+          reactive UI.</li>
+          <li>Sequence UI state transitions (loading, success, error) in a functional,
+          message-driven architecture.</li>
+        </ul>
+
+        
+<hr class="footer-rule"/>
+<footer>
+  Site generated by <a href="https://typelevel.org/Laika/">Laika</a> with the Helium theme.
+</footer>
+
+
+      </main>
+
+    </div>
+
+  </body>
+
+</html>

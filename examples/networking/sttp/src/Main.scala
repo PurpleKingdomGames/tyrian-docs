@@ -13,22 +13,19 @@ import scala.scalajs.js.annotation.*
 
 /** ## Example: Using sttp HTTP client with Tyrian
   *
-  * This example demonstrates how to integrate the sttp HTTP client into a
-  * Tyrian application. It shows how to:
-  *   - Fetch the user's public IP address and current time data from external
-  *     APIs.
-  *   - Manage asynchronous effects and loading state using Tyrian's Cmd and
-  *     message system.
-  *   - Display loading indicators, error messages, and fetched data in a
-  *     reactive UI.
-  *   - Sequence UI state transitions (loading, success, error) in a functional,
-  *     message-driven architecture.
+  * This example demonstrates how to integrate the sttp HTTP client into a Tyrian application. It
+  * shows how to:
+  *   - Fetch the user's public IP address and current time data from external APIs.
+  *   - Manage asynchronous effects and loading state using Tyrian's Cmd and message system.
+  *   - Display loading indicators, error messages, and fetched data in a reactive UI.
+  *   - Sequence UI state transitions (loading, success, error) in a functional, message-driven
+  *     architecture.
   */
 @JSExportTopLevel("TyrianApp")
 object Main extends TyrianIOApp[Msg, Model]:
 
   def main(args: Array[String]): Unit =
-    launch("app")
+    launch("myapp")
 
   def router: Location => Msg = Routing.none(Msg.NoOp)
 
@@ -93,7 +90,101 @@ object Main extends TyrianIOApp[Msg, Model]:
             )
         }
       }
+
+    val styles =
+      Html.raw("style") {
+        """
+        |body {
+        |  margin: 0;
+        |  padding: 0;
+        |  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+        |}
+        |.main-bg {
+        |  display: flex;
+        |  flex-direction: column;
+        |  align-items: center;
+        |  justify-content: center;
+        |  min-height: 100vh;
+        |  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+        |}
+        |.clock-container {
+        |  display: flex;
+        |  flex-direction: column;
+        |  align-items: center;
+        |  justify-content: center;
+        |  width: 350px;
+        |  height: 250px;
+        |  padding: 1.5rem;
+        |  background: #181c20;
+        |  border-radius: 1rem;
+        |  box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+        |  margin: 2rem auto;
+        |  color: #f8f8f8;
+        |  position: relative;
+        |}
+        |.clock-loading {
+        |  font-size: 1.5rem;
+        |  color: #888;
+        |  margin-bottom: 1rem;
+        |}
+        |.clock-time {
+        |  font-family: 'SF Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+        |  font-size: 3rem;
+        |  letter-spacing: 0.1em;
+        |  margin-bottom: 0.5rem;
+        |}
+        |.clock-date {
+        |  font-size: 1.2rem;
+        |  margin-bottom: 0.5rem;
+        |}
+        |.clock-tz {
+        |  font-size: 1rem;
+        |  margin-bottom: 0.5rem;
+        |  color: #a0e7e5;
+        |}
+        |.clock-ip {
+        |  font-size: 1rem;
+        |  margin-bottom: 0.5rem;
+        |  color: #ffd166;
+        |}
+        |.btn {
+        |  margin-top: 2rem;
+        |  padding: 0.75rem 2rem;
+        |  font-size: 1.1rem;
+        |  border-radius: 0.5rem;
+        |  background: #00b4d8;
+        |  color: #fff;
+        |  border: none;
+        |  cursor: pointer;
+        |  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+        |}
+        |.btn:hover {
+        |  background: #48cae4;
+        |  box-shadow: 0 4px 16px rgba(0, 180, 216, 0.15);
+        |}
+        |.btn:active {
+        |  background: #0096c7;
+        |  transform: scale(0.96);
+        |  box-shadow: 0 2px 8px rgba(0, 150, 199, 0.18);
+        |}
+        |.spinner {
+        |  width: 48px;
+        |  height: 48px;
+        |  border: 5px solid #e0e0e0;
+        |  border-top: 5px solid #00b4d8;
+        |  border-radius: 50%;
+        |  animation: spin 1s linear infinite;
+        |  z-index: 11;
+        |}
+        |@keyframes spin {
+        |  0% { transform: rotate(0deg); }
+        |  100% { transform: rotate(360deg); }
+        |}
+        |""".stripMargin.trim
+      }
+
     div(cls := "main-bg")(
+      styles,
       timeView,
       button(onClick(Msg.Refresh), cls := "btn")(text("Refresh"))
     )

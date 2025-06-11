@@ -11,7 +11,7 @@ object examples extends mill.Module {
   object effects extends mill.Module {
 
     object `cats-effect` extends examplemodule.ExampleModule
-    object fs2        extends examplemodule.ExampleModule
+    object fs2           extends examplemodule.ExampleModule
     object zio extends examplemodule.ExampleModule {
       override def ivyDeps =
         Agg(
@@ -35,21 +35,36 @@ object examples extends mill.Module {
       override def ivyDeps =
         super.ivyDeps() ++
           Agg(
-            ivy"io.circe::circe-core::0.14.10",
-            ivy"io.circe::circe-parser::0.14.10"
+            ivy"io.circe::circe-core::0.14.13",
+            ivy"io.circe::circe-parser::0.14.13"
           )
     }
+
     object `http4s-dom` extends examplemodule.ExampleModule {
       override def ivyDeps =
         super.ivyDeps() ++
           Agg(
             ivy"org.http4s::http4s-dom::0.2.11",
             ivy"org.http4s::http4s-circe::0.23.30",
-            ivy"io.circe::circe-core::0.14.10",
-            ivy"io.circe::circe-parser::0.14.10",
-            ivy"io.circe::circe-generic::0.14.10"
+            ivy"io.circe::circe-core::0.14.13",
+            ivy"io.circe::circe-parser::0.14.13",
+            ivy"io.circe::circe-generic::0.14.13"
           )
     }
+
+    object sttp extends examplemodule.ExampleModule {
+      override def ivyDeps =
+        super.ivyDeps() ++
+          Agg(
+            ivy"com.softwaremill.sttp.client4::core::4.0.8",
+            ivy"com.softwaremill.sttp.client4::cats::4.0.8",
+            ivy"com.softwaremill.sttp.client4::circe::4.0.8",
+            ivy"io.circe::circe-core::0.14.13",
+            ivy"io.circe::circe-parser::0.14.13",
+            ivy"io.circe::circe-generic::0.14.13"
+          )
+    }
+
     object websockets extends examplemodule.ExampleModule
 
   }

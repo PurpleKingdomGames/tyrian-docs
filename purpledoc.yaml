@@ -16,6 +16,9 @@ website:
   latestRelease: 0.14.0
   baseUrl: https://purplekingdomgames.github.io/tyrian-docs/
   # baseUrl: http://127.0.0.1:8080/
+  navigationOrder:
+    - documentation
+    - examples
 docsRepo:
   name: Docs
   url: https://github.com/PurpleKingdomGames/tyrian-docs

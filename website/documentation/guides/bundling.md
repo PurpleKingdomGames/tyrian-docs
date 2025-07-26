@@ -24,11 +24,11 @@ We have a standalone [example of using Tyrian with scalajs-bundler](https://gith
 
 In the parcel.js examples, you always call `TyrianApp.launch(..)` sooner or later. With scalajs-bundler (at least in our examples), the app launches itself. There are a few subtle differences you need to look out for:
 
-1. In your `build.sbt` file, you need to tell Scala.js to run from the `main` method.
+In your `build.sbt` file, you need to tell Scala.js to run from the `main` method.
 
 `scalaJSUseMainModuleInitializer := true,`
 
-2. ...and so you'll need a `main` method!
+...and so you'll need a `main` method!
 
 To do that we just call one of the underlying `launch` methods on the `TyrianApp` trait. (These are the same methods we would have called from JavaScript to launch the app via Parcel.js.)
 
@@ -37,9 +37,7 @@ def main(args: Array[String]): Unit =
   launch("myapp")
 ```
 
-3. Add the scalajs-bundler plugin.
-
-Add the following to `project/plugins.sbt`:
+Add the scalajs-bundler plugin, by adding the following to `project/plugins.sbt`:
 
 ```scala
 addSbtPlugin("ch.epfl.scala" % "sbt-scalajs-bundler" % "0.20.0")
@@ -51,7 +49,7 @@ And enable the plugin on the project in your `build.sbt` file:
 enablePlugins(ScalaJSBundlerPlugin)
 ```
 
-4. Reference the right `js` file.
+Reference the right `js` file.
 
 In the parcel.js examples, you'll see that we directly reference the normal Scala.js build output file in the `target` directory (or `out` directory in Mill examples), such as `target/@SCALA_VERSION@/tyrianapp-fastopt.js`. This is so that you can hot-reload on re-compile. However in scalajs-bundler, the output folder and file name you need to use will be slightly different, such as `target/@SCALA_VERSION@/scalajs-bundler/main/tyrianapp-fastopt-bundle.js`.
 

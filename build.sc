@@ -6,7 +6,31 @@ import mill.scalajslib.api._
 
 import $file.scripts.examplemodule
 
-object examples extends mill.Module {
+object `tyrian-next-examples` extends mill.Module {
+
+  object `getting-started` extends mill.Module {
+
+    object minimal       extends examplemodule.ExampleModule {
+      
+      def ivyDeps =
+        Agg(
+          ivy"io.indigoengine::tyrian-next::$tyrianVersion"
+        )
+
+    }
+    object subcomponents extends examplemodule.ExampleModule {
+      
+      def ivyDeps =
+        Agg(
+          ivy"io.indigoengine::tyrian-next::$tyrianVersion"
+        )
+
+    }
+
+  }
+
+}
+object `classic-examples` extends mill.Module {
 
   object effects extends mill.Module {
 

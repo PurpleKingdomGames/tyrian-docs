@@ -18,7 +18,12 @@ website:
   # baseUrl: http://127.0.0.1:8080/
   navigationOrder:
     - documentation
-    - examples
+    - tyrian-next-examples
+    - classic-examples
+  navigationMappings:
+    documentation: Documentation
+    tyrian-next-examples: Tyrian Next Examples
+    classic-examples: Classic Examples
 docsRepo:
   name: Docs
   url: https://github.com/PurpleKingdomGames/tyrian-docs

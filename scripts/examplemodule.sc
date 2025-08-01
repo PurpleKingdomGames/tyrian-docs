@@ -3,10 +3,10 @@ import mill.scalalib._
 import mill.scalajslib._
 import mill.scalajslib.api._
 
-import $ivy.`org.typelevel::scalac-options:0.1.7`, org.typelevel.scalacoptions._
+import $ivy.`org.typelevel::scalac-options:0.1.8`, org.typelevel.scalacoptions._
 
 trait ExampleModule extends ScalaJSModule {
-  def scalaVersion   = "3.6.4"
+  def scalaVersion   = "3.7.1"
   def scalaJSVersion = "1.19.0"
 
   override def scalacOptions = T {
@@ -30,7 +30,7 @@ trait ExampleModule extends ScalaJSModule {
     flags.filterNot(_ == "-Wunused:locals")
   }
 
-  val tyrianVersion = "0.14.0"
+  val tyrianVersion = "0.14.1-SNAPSHOT"
 
   def ivyDeps =
     Agg(

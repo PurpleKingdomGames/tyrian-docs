@@ -1,1 +1,1 @@
-# Classic
+# Tyrian Next Examples

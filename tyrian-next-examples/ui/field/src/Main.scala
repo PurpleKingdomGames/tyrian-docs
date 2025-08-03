@@ -14,16 +14,12 @@ object Main extends TyrianNext[Model]:
   def init(flags: Map[String, String]): Outcome[Model] =
     Outcome(Model.init)
 
-  /** The main application's update and view functions simply delegate to the Model.
-    */
-  // ```scala
   def update(model: Model): GlobalMsg => Outcome[Model] =
     case e =>
       model.update(e)
 
   def view(model: Model): HtmlRoot =
     HtmlRoot(model.view)
-  // ```
 
   def watchers(model: Model): Batch[Watcher] =
     Batch.empty

@@ -2,6 +2,7 @@ package example
 
 import tyrian.*
 import tyrian.next.*
+import scala.concurrent.duration.*
 
 import scala.scalajs.js.annotation.*
 
@@ -14,16 +15,23 @@ object Main extends TyrianNext[Model]:
   def init(flags: Map[String, String]): Outcome[Model] =
     Outcome(Model.init)
 
-  /** The main application's update and view functions simply delegate to the Model.
-    */
-  // ```scala
   def update(model: Model): GlobalMsg => Outcome[Model] =
     case e =>
       model.update(e)
 
   def view(model: Model): HtmlRoot =
     HtmlRoot(model.view)
-  // ```
 
+  /** Conditional watchers based on model state. The timer only runs when there's a pending debounce
+    * operation, demonstrating dynamic watcher management.
+    */
+//```scala
   def watchers(model: Model): Batch[Watcher] =
-    Batch.empty
+    model.debounceInput.debouncer match
+      case Some(_) =>
+        Batch(
+          Watcher.every(100.millis, _ => DebounceEvent.TimePassed)
+        )
+      case None =>
+        Batch.empty
+//```

@@ -18,10 +18,20 @@ object Main extends TyrianIOApp[Msg, Model]:
   def init(flags: Map[String, String]): (Model, Cmd[IO, Msg]) =
     (new js.Date(), Cmd.None)
 
+  /** The update function handles tick messages by simply updating the model with the new time.
+    */
+//```scala
   def update(model: Model): Msg => (Model, Cmd[IO, Msg]) =
     case Msg.Tick(newTime) => (newTime, Cmd.None)
     case Msg.NoOp          => (model, Cmd.None)
+//```
 
+  /** The view function renders an SVG clock face with a moving second hand.
+    *
+    * We calculate the angle of the second hand based on the current seconds (0-59), then compute
+    * the X and Y coordinates for the tip of the hand using trigonometry.
+    */
+//```scala
   def view(model: Model): Html[Msg] =
     val angle = model.getSeconds() * 2 * math.Pi / 60 - math.Pi / 2
     val handX = 50 + 40 * math.cos(angle)
@@ -42,9 +52,15 @@ object Main extends TyrianIOApp[Msg, Model]:
         stroke := "#023963"
       )
     )
+//```
 
+  /** The subscription sends a tick message every second, providing the current time. This drives
+    * the clock animation by continuously updating the model.
+    */
+//```scala
   def subscriptions(model: Model): Sub[IO, Msg] =
     Sub.every[IO](1.second, "clock-ticks").map(Msg.Tick.apply)
+//```
 
 type Model = js.Date
 

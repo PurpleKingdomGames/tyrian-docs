@@ -29,3 +29,8 @@ header .row a {
 .icofont-laika {
   color: white;
 }
+
+blockquote {
+  background-color: #FFDDFF;
+  padding: 1.0em;
+}

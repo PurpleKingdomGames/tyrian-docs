@@ -1,8 +1,23 @@
 package example
 
 import tyrian.Html.*
-import tyrian.next.* 
+import tyrian.next.*
 
+/** The `CounterManager` holds and manages a list of counters that are currently active. It is
+  * following the Elm component pattern of having an `update` and `view` method.
+  *
+  * In this case, the `CounterManager` is interested in both it's own events _and_ the
+  * `CounterEvent`s (which are wrapped in `CounterManagerEvent.Modify`), which it will delegate to
+  * the counter instances. By making the `update` function accept `GlobalMsg`, we have to do a
+  * little extra work matching on the event types, but it means that wiring this component in at the
+  * next level up is trivially easy.
+  *
+  * `CounterManager`s view returns an `HtmlFragment` instead of HTML. This is because eventually we
+  * need `HtmlFragment`s for the `HtmlRoot` instance to turn into HTML. `HtmlFragment`s are easy to
+  * combine, and also support 'out of order' rendering, by placing `Marker` instances in the Html
+  * and telling the fragment to add HTML chunks to the markers using the `insert` functions.
+  */
+// ```scala
 final case class CounterManager(counters: List[Counter]):
 
   def update: GlobalMsg => Outcome[CounterManager] =
@@ -38,6 +53,7 @@ final case class CounterManager(counters: List[Counter]):
           }
       )
     )
+// ```
 
 object CounterManager:
   val initial: CounterManager =

@@ -10,16 +10,85 @@ object `tyrian-next-examples` extends mill.Module {
 
   object `getting-started` extends mill.Module {
 
-    object minimal       extends examplemodule.ExampleModule {
-      
+    object minimal extends examplemodule.ExampleModule {
+
       def ivyDeps =
         Agg(
           ivy"io.indigoengine::tyrian-next::$tyrianVersion"
         )
 
     }
+
     object subcomponents extends examplemodule.ExampleModule {
-      
+
+      def ivyDeps =
+        Agg(
+          ivy"io.indigoengine::tyrian-next::$tyrianVersion"
+        )
+
+    }
+
+    object `html-fragments` extends examplemodule.ExampleModule {
+
+      def ivyDeps =
+        Agg(
+          ivy"io.indigoengine::tyrian-next::$tyrianVersion"
+        )
+
+    }
+
+  }
+
+  object networking extends mill.Module {
+
+    object http extends examplemodule.ExampleModule {
+
+      def ivyDeps =
+        Agg(
+          ivy"io.indigoengine::tyrian-next::$tyrianVersion",
+          ivy"io.circe::circe-core::0.14.13",
+          ivy"io.circe::circe-parser::0.14.13"
+        )
+
+    }
+
+    object websockets extends examplemodule.ExampleModule {
+
+      def ivyDeps =
+        Agg(
+          ivy"io.indigoengine::tyrian-next::$tyrianVersion"
+        )
+
+    }
+
+  }
+
+  object svg extends mill.Module {
+
+    object clock extends examplemodule.ExampleModule {
+
+      def ivyDeps =
+        Agg(
+          ivy"io.indigoengine::tyrian-next::$tyrianVersion"
+        )
+
+    }
+
+  }
+
+  object ui extends mill.Module {
+
+    object debouncing extends examplemodule.ExampleModule {
+
+      def ivyDeps =
+        Agg(
+          ivy"io.indigoengine::tyrian-next::$tyrianVersion"
+        )
+
+    }
+
+    object field extends examplemodule.ExampleModule {
+
       def ivyDeps =
         Agg(
           ivy"io.indigoengine::tyrian-next::$tyrianVersion"

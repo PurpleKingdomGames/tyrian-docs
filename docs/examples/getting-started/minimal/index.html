@@ -47,9 +47,9 @@
     
     <a class="button-link" href="https://purplekingdomgames.github.io/tyrian-docs/live_demos">Live Demos</a>
     
-    <a class="button-link" href="https://discord.gg/b5CD47g">Discord</a>
+    <a class="button-link" href="https://discord.gg/3E2r9FwwHu">Discord</a>
     
-    <a class="button-link" href="https://github.com/PurpleKingdomGames/tyrian">Github</a>
+    <a class="button-link" href="https://github.com/PurpleKingdomGames/indigoengine">Github</a>
     
   </div>  
 
@@ -61,9 +61,9 @@
     
     <a class="button-link" href="https://purplekingdomgames.github.io/tyrian-docs/live_demos">Live Demos</a>
     
-    <a class="button-link" href="https://discord.gg/b5CD47g">Discord</a>
+    <a class="button-link" href="https://discord.gg/3E2r9FwwHu">Discord</a>
     
-    <a class="button-link" href="https://github.com/PurpleKingdomGames/tyrian">Github</a>
+    <a class="button-link" href="https://github.com/PurpleKingdomGames/indigoengine">Github</a>
     
   </div>
 
@@ -98,7 +98,7 @@
     <li class="level3 nav-leaf"><a href="../../effects/cats-effect/">Cats Effect</a></li>
     <li class="level3 nav-leaf"><a href="../../effects/fs2/">FS2</a></li>
     <li class="level3 nav-leaf"><a href="../../effects/zio/">ZIO</a></li>
-    <li class="level2 nav-node"><a href="../">Getting-started</a></li>
+    <li class="level2 nav-node"><a href="../">Getting started</a></li>
     <li class="level3 active nav-leaf"><a href="#">Minimal Setup</a></li>
     <li class="level3 nav-leaf"><a href="../subcomponents/">Sub-Components</a></li>
     <li class="level2 nav-node"><a href="../../networking/">Networking</a></li>
@@ -122,7 +122,8 @@
   <p class="header"><a href="#">Minimal Setup</a></p>
 
   <ul class="nav-list">
-    <li class="level1 nav-leaf"><a href="#example-links">Example Links</a></li>
+    <li class="level1 nav-leaf"><a href="#demo">Demo</a></li>
+    <li class="level1 nav-leaf"><a href="#links">Links</a></li>
   </ul>
 
   <p class="footer"></p>
@@ -133,12 +134,22 @@
 
         <h1 id="minimal-setup" class="title">Minimal Setup</h1>
         
-        <h2 id="example-links" class="section"><a class="anchor-link left" href="#example-links"><i class="icofont-laika link">&#xef71;</i></a>Example Links</h2>
+        <h2 id="demo" class="section"><a class="anchor-link left" href="#demo"><i class="icofont-laika link">&#xef71;</i></a>Demo</h2>
+        <div id="live-demo" style="border:2px solid #e400ff;width:400px;height:400px;background:#a888db33;color: #e400ff;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+          ▶  Click to play
+        </div>
+        <script>
+  document.getElementById("live-demo").addEventListener("click", function() {
+    this.innerHTML = '<iframe width="396" height="396" src="/live_demos/examples/getting-started/minimal/index.html" frameborder="0" allow="autoplay; encrypted-media" scrolling="no"></iframe>';
+  });
+</script>
+        
+        <h2 id="links" class="section"><a class="anchor-link left" href="#links"><i class="icofont-laika link">&#xef71;</i></a>Links</h2>
         <ul>
           <li><a href="https://github.com/PurpleKingdomGames/tyrian-docs/blob/main/examples/getting-started/minimal">View example code</a></li>
         </ul>
         <ul>
-          <li><a href="https://purplekingdomgames.github.io/tyrian-docs//live_demos/examples/getting-started/minimal/">Live demo</a></li>
+          <li><a href="../../../live_demos/examples/getting-started/minimal/">Live demo</a></li>
         </ul>
 
         

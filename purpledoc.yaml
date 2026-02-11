@@ -29,4 +29,7 @@ repo:
   editBaseUrl: https://github.com/PurpleKingdomGames/indigoengine/blob/main
 discord:
   name: Discord
-  url: https://discord.gg/b5CD47g
+  url: https://discord.gg/3E2r9FwwHu
+demo:
+  width: 400
+  height: 400

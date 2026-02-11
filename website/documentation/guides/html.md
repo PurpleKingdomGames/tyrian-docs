@@ -114,7 +114,7 @@ import tyrian.CSS.*
 
 ### Rolling your own
 
-If you find we've missed a tag or attribute or something, [please raise an issue](https://github.com/PurpleKingdomGames/tyrian/issues). In the meantime, you can always make your own. Here are just a few made up examples, each of these has numerous constructors for you to explore:
+If you find we've missed a tag or attribute or something, [please raise an issue](https://github.com/PurpleKingdomGames/indigoengine/issues). In the meantime, you can always make your own. Here are just a few made up examples, each of these has numerous constructors for you to explore:
 
 ```scala mdoc:js
 // A 'canvas' tag
@@ -144,4 +144,4 @@ One occasion where you may need to make your own tags or attributes etc., is whe
 
 A previous case of this was where the input field `value` `property` was incorrectly declared as an `attribute`, and so the value wasn't changed as expected based on model updates.
 
-Effort has gone in to getting these things right, but if you come across any issues, [please report them](https://github.com/PurpleKingdomGames/tyrian/issues), and the workaround is to re-declare it yourself as above while a fix is produced.
+Effort has gone in to getting these things right, but if you come across any issues, [please report them](https://github.com/PurpleKingdomGames/indigoengine/issues), and the workaround is to re-declare it yourself as above while a fix is produced.

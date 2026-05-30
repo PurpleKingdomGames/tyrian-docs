@@ -9,7 +9,8 @@ import org.scalajs.dom.KeyboardEvent
 import org.scalajs.dom.TouchEvent
 import org.scalajs.dom.document
 import org.scalajs.dom.window
-import tyrian.*
+import tyrian.classic.*
+import tyrian.classic.syntax.*
 
 object Effects:
 

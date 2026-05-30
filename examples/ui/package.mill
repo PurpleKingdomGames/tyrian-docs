@@ -1,0 +1,3 @@
+package build.examples.ui
+
+object `package` extends mill.Module

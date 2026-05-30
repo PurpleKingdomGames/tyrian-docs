@@ -34,8 +34,8 @@ Commands can be produced as part of a result of calling the `init` or `updateMod
 Here is an example in which, on receiving a message `Msg.LogThis`, we are not going to change the model, but we want to write to the browser's JavaScript console:
 
 ```scala mdoc:js:shared
-import tyrian.*
-import tyrian.cmds.*
+import tyrian.classic.classic.*
+import tyrian.classic.classic.cmds.*
 import cats.effect.IO
 
 type Model = Int

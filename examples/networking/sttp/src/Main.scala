@@ -1,8 +1,8 @@
 package example
 
 import cats.effect.IO
-import tyrian.Html.*
-import tyrian.*
+import tyrian.classic.Html.*
+import tyrian.classic.*
 import sttp.client4.impl.cats.FetchCatsBackend
 import sttp.client4.*
 import sttp.client4.circe.*

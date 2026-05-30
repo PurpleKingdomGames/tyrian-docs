@@ -1,8 +1,8 @@
 package com.example.example
 
 import cats.effect.IO
-import tyrian.*
 import tyrian.Html.*
+import tyrian.*
 
 trait SSR:
   def render(n: SSR.Input): IO[SSR.Output]
@@ -18,7 +18,7 @@ object SSR:
       val html =
         div(styles)(
           topLine,
-          p(text("Was sent the following: " + in.toString))
+          p(text("Was sent the following: " + in.show))
         ).render
 
       IO.pure(SSR.Output(html))
@@ -29,8 +29,8 @@ object SSR:
 
   opaque type Input = String
   object Input:
-    inline def apply(s: String): Input        = s
-    extension (n: Input) def toString: String = n
+    inline def apply(s: String): Input    = s
+    extension (n: Input) def show: String = n
 
   opaque type Output = String
   object Output:

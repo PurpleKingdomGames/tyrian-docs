@@ -2,13 +2,13 @@ import scala.sys.process._
 import scala.language.postfixOps
 
 val Http4sVersion          = "0.23.30"
-val CirceVersion           = "0.14.10"
-val MunitVersion           = "1.1.0"
+val CirceVersion           = "0.14.14"
+val MunitVersion           = "1.2.2"
 val LogbackVersion         = "1.2.6"
-val MunitCatsEffectVersion = "1.0.7"
+val MunitCatsEffectVersion = "2.2.0"
 
 lazy val tyrianVersion = TyrianVersion.getVersion
-lazy val scala3Version = "3.6.3"
+lazy val scala3Version = "3.8.3"
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
@@ -34,7 +34,7 @@ lazy val server =
         "org.http4s"      %% "http4s-circe"        % Http4sVersion,
         "org.http4s"      %% "http4s-dsl"          % Http4sVersion,
         "io.circe"        %% "circe-generic"       % CirceVersion,
-        "org.typelevel"   %% "munit-cats-effect-3" % MunitCatsEffectVersion % Test,
+        "org.typelevel"   %% "munit-cats-effect"   % MunitCatsEffectVersion % Test,
         "ch.qos.logback"   % "logback-classic"     % LogbackVersion,
         "io.indigoengine" %% "tyrian-tags"         % tyrianVersion
       )

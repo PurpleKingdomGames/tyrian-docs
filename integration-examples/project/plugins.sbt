@@ -1,5 +1,5 @@
-addSbtPlugin("org.scala-js"        % "sbt-scalajs"         % "1.19.0")
-addSbtPlugin("org.typelevel"       % "sbt-tpolecat"        % "0.5.2")
-addSbtPlugin("ch.epfl.scala"       % "sbt-scalafix"        % "0.12.1")
+addSbtPlugin("org.scala-js"        % "sbt-scalajs"         % "1.21.0")
+addSbtPlugin("org.typelevel"       % "sbt-tpolecat"        % "0.5.5")
+addSbtPlugin("ch.epfl.scala"       % "sbt-scalafix"        % "0.14.6")
 addSbtPlugin("com.github.reibitto" % "sbt-welcome"         % "0.4.0")
 addSbtPlugin("ch.epfl.scala"       % "sbt-scalajs-bundler" % "0.21.1")

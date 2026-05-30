@@ -1,0 +1,3 @@
+package build.examples.`getting-started`
+
+object `package` extends mill.Module

@@ -1,0 +1,3 @@
+package build.examples.networking.websockets
+
+object `package` extends build.ExampleModule

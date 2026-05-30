@@ -34,8 +34,8 @@ Assuming two messages `Error` and `Empty`, we can attempt to focus a given ID.
 
 ```scala mdoc:js:shared
 import cats.effect.IO
-import tyrian.*
-import tyrian.cmds.*
+import tyrian.classic.classic.*
+import tyrian.classic.classic.cmds.*
 
 val cmd: Cmd[IO, Msg] =
   Dom.focus("my-id") {
@@ -53,7 +53,7 @@ Will read any file data, with build in support for text and images.
 Assuming two messages `Error` and `Read`, we can attempt to read the contents of a text file.
 
 ```scala mdoc:js
-import tyrian.cmds.*
+import tyrian.classic.classic.cmds.*
 
 val cmd: Cmd[IO, Msg] =
   FileReader.readText("my-file-input-field-id") {
@@ -71,7 +71,7 @@ Please see [Networking](networking.md) for details.
 Given a path, this cmd will load an image and create and return an `HTMLImageElement` for you to make use of.
 
 ```scala mdoc:js
-import tyrian.cmds.*
+import tyrian.classic.classic.cmds.*
 
 val cmd: Cmd[IO, Msg] =
   ImageLoader.load("path/to/img.png") {
@@ -85,7 +85,7 @@ val cmd: Cmd[IO, Msg] =
 A series of commands that mirror the [localstorage interface](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 
 ```scala mdoc:js
-import tyrian.cmds.*
+import tyrian.classic.classic.cmds.*
 
 val cmd: Cmd[IO, Msg] =
   Cmd.Batch[IO, Msg](
@@ -121,7 +121,7 @@ val cmd: Cmd[IO, Msg] =
 Allows you to log to your browsers JavaScript console:
 
 ```scala mdoc:js
-import tyrian.cmds.*
+import tyrian.classic.classic.cmds.*
 
 val cmd: Cmd[IO, Msg] =
   Logger.info("Log this!")
@@ -130,7 +130,7 @@ val cmd: Cmd[IO, Msg] =
 If you're app is doing a lot of regular work, you can cut down the noise with the 'once' versions:
 
 ```scala mdoc:js
-import tyrian.cmds.*
+import tyrian.classic.classic.cmds.*
 
 val cmd: Cmd[IO, Msg] =
   Logger.debugOnce("Log this exact message only once!")
@@ -143,7 +143,7 @@ As you might expect, `Random` produces random values! Random works slightly diff
 Assuming a message `RandomValue`, here are a few examples:
 
 ```scala mdoc:js
-import tyrian.cmds.*
+import tyrian.classic.classic.cmds.*
 
 val toMessage = (v: String) => Msg.RandomValue(v)
 

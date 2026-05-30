@@ -6,14 +6,14 @@ import sbtwelcome._
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
 lazy val tyrianVersion = TyrianVersion.getVersion
-lazy val scala3Version = "3.6.3"
+lazy val scala3Version = "3.8.3"
 
 lazy val commonSettings: Seq[sbt.Def.Setting[_]] = Seq(
   version      := tyrianVersion,
   scalaVersion := scala3Version,
   organization := "io.indigoengine",
   libraryDependencies ++= Seq(
-    "org.scalameta" %%% "munit" % "1.1.0" % Test
+    "org.scalameta" %%% "munit" % "1.2.2" % Test
   ),
   libraryDependencies ++= Seq(
     "io.indigoengine" %%% "tyrian-io" % tyrianVersion
@@ -41,6 +41,7 @@ lazy val bundler =
     .settings(name := "bundler")
     .settings(
       // Source maps seem to be broken with bundler
+      Compile / fastLinkJS / scalaJSLinkerConfig ~= { _.withSourceMap(false) },
       Compile / fastOptJS / scalaJSLinkerConfig ~= { _.withSourceMap(false) },
       Compile / fullOptJS / scalaJSLinkerConfig ~= { _.withSourceMap(false) },
       scalaJSUseMainModuleInitializer := true
@@ -58,56 +59,6 @@ lazy val field =
     .settings(commonSettings: _*)
     .settings(name := "field")
 
-lazy val http =
-  (project in file("http"))
-    .enablePlugins(ScalaJSPlugin)
-    .settings(commonSettings: _*)
-    .settings(
-      name := "http",
-      libraryDependencies ++= Seq(
-        "io.circe" %%% "circe-core",
-        "io.circe" %%% "circe-parser"
-      ).map(_ % "0.14.10")
-    )
-
-lazy val http4sdom =
-  (project in file("http4s-dom"))
-    .enablePlugins(ScalaJSPlugin)
-    .settings(commonSettings: _*)
-    .settings(
-      name := "http4s-dom",
-      libraryDependencies ++= Seq(
-        "io.circe" %%% "circe-core",
-        "io.circe" %%% "circe-parser",
-        "io.circe" %%% "circe-generic"
-      ).map(_ % "0.14.10")
-    )
-    .settings(
-      libraryDependencies ++= Seq(
-        "org.http4s" %%% "http4s-dom"   % "0.2.11",
-        "org.http4s" %%% "http4s-circe" % "0.23.30"
-      )
-    )
-
-lazy val sttp =
-  (project in file("sttp"))
-    .enablePlugins(ScalaJSPlugin)
-    .settings(commonSettings: _*)
-    .settings(
-      name := "sttp",
-      libraryDependencies ++= Seq(
-        "io.circe" %%% "circe-core",
-        "io.circe" %%% "circe-generic"
-      ).map(_ % "0.14.13")
-    )
-    .settings(
-      libraryDependencies ++= Seq(
-        "com.softwaremill.sttp.client4" %%% "core",
-        "com.softwaremill.sttp.client4" %%% "cats",
-        "com.softwaremill.sttp.client4" %%% "circe"
-      ).map(_ % "4.0.8")
-    )
-
 lazy val mainlauncher =
   (project in file("main-launcher"))
     .enablePlugins(ScalaJSPlugin)
@@ -117,6 +68,12 @@ lazy val mainlauncher =
       Compile / mainClass             := Some("example.Main"),
       scalaJSUseMainModuleInitializer := true
     )
+
+lazy val mario =
+  (project in file("mario"))
+    .enablePlugins(ScalaJSPlugin)
+    .settings(commonSettings: _*)
+    .settings(name := "mario")
 
 lazy val nonpm =
   (project in file("no-npm"))
@@ -133,24 +90,15 @@ lazy val tailwind =
     .settings(commonSettings: _*)
     .settings(name := "tailwind")
 
-lazy val websocket =
-  (project in file("websocket"))
-    .enablePlugins(ScalaJSPlugin)
-    .settings(commonSettings: _*)
-    .settings(name := "websocket")
-
 lazy val exampleProjects: List[String] =
   List(
     "bootstrap",
     "bundler",
     "electron",
-    "http",
-    "http4sdom",
-    "sttp",
     "mainlauncher",
+    "mario",
     "nonpm",
-    "tailwind",
-    "websocket"
+    "tailwind"
   )
 
 lazy val tyrianExamplesProject =
@@ -183,6 +131,15 @@ lazy val tyrianExamplesProject =
       aliasColor       := scala.Console.BLUE,
       commandColor     := scala.Console.CYAN,
       descriptionColor := scala.Console.WHITE
+    )
+    .aggregate(
+      bootstrap,
+      bundler,
+      electron,
+      mainlauncher,
+      mario,
+      nonpm,
+      tailwind
     )
 
 lazy val code =

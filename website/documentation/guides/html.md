@@ -7,9 +7,9 @@ In Tyrian, you describe your view in Scala and the VirtualDom implementation tha
 Here is a simple made up example of the syntax to give you a flavor:
 
 ```scala mdoc:js:shared
-import tyrian.*
-import tyrian.Html.*
-import tyrian.CSS
+import tyrian.classic.classic.*
+import tyrian.classic.classic.Html.*
+import tyrian.classic.classic.CSS
 
 enum Msg:
   case Greet
@@ -83,7 +83,7 @@ p(style(CSS.`font-weight`("bold")))("Hello")
 Sometime you might want to optionally render a tag, or not. To help with this, you can use the `orEmpty` extension method:
 
 ```scala
-import tyrian.syntax.*
+import tyrian.classic.classic.syntax.*
 
 Option(p("Show this!")).orEmpty
 ```
@@ -91,7 +91,7 @@ Option(p("Show this!")).orEmpty
 Or the `Empty` type:
 
 ```scala
-import tyrian.syntax.*
+import tyrian.classic.classic.syntax.*
 
 if showIt then p("Show this!") else Empty
 ```
@@ -101,7 +101,7 @@ if showIt then p("Show this!") else Empty
 You can also pull in SVG tags and attributes using:
 
 ```scala mdoc:js
-import tyrian.SVG.*
+import tyrian.classic.classic.SVG.*
 ```
 
 ### CSS
@@ -109,7 +109,7 @@ import tyrian.SVG.*
 Many standard CSS terms can be imported using:
 
 ```scala mdoc:js
-import tyrian.CSS.*
+import tyrian.classic.classic.CSS.*
 ```
 
 ### Rolling your own

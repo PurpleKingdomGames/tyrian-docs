@@ -1,7 +1,7 @@
 package example
 
-import tyrian.Html.*
-import tyrian.*
+import tyrian.classic.Html.*
+import tyrian.classic.*
 import zio.*
 import zio.interop.catz.*
 

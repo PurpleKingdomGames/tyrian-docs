@@ -1,9 +1,10 @@
 package example
 
 import cats.effect.IO
-import tyrian.Html.*
-import tyrian.SVG.*
-import tyrian.*
+import tyrian.classic.Html.*
+import tyrian.classic.SVG.*
+import tyrian.classic.*
+import tyrian.classic.syntax.*
 
 import scala.scalajs.js.annotation.*
 

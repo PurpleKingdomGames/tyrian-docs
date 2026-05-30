@@ -15,8 +15,8 @@ The example is comprised of two buttons, `+` and `-`, and some text that shows a
 The version of this in the [examples](https://github.com/PurpleKingdomGames/tyrian-docs/tree/main/examples/effects/cats-effect) is already quite lean, but the version below has been stripped back to the minimum.
 
 ```scala mdoc:js
-import tyrian.Html.*
-import tyrian.*
+import tyrian.classic.classic.Html.*
+import tyrian.classic.classic.*
 import cats.effect.IO
 
 import scala.scalajs.js.annotation.*
@@ -75,8 +75,8 @@ Our app is a counter, so we need a number we can increment and decrement. In thi
 To use our model, we're going to have to initialize it!
 
 ```scala mdoc:js:shared
-import tyrian.*
-import tyrian.Html.*
+import tyrian.classic.classic.*
+import tyrian.classic.classic.Html.*
 import cats.effect.IO
 
 type Model = Int

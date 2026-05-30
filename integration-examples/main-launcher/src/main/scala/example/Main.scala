@@ -1,6 +1,6 @@
 package example
 
-import tyrian.*
+import tyrian.classic.*
 
 object Main {
   def main(args: Array[String]): Unit =

@@ -4,7 +4,7 @@ We have a number of examples.
 
 If you type `sbt` on your command prompt you will be presented with a welcome message. Many of the examples can be built from the aliases presented in the  prompt.
 
-Alternatively, to build most of them you can run `sbt counter/fastOptJS` to take one example.
+Alternatively, to build most of them you can run `sbt counter/fastLinkJS` to take one example.
 
 You then need to run them by `cd`'ing into the relevant directory and running `yarn install` and then `yarn start` to launch a Parcel.js based dev server. If you navigate to the page shown in your terminal (typically [http://localhost:1234/](http://localhost:1234/)) you'll be able to see the running example.
 
@@ -14,7 +14,7 @@ There are some examples that do not follow the instructions above, and they are:
 
 ### Bundler example
 
-The bundler example requires `sbt bundler/fastOptJS::webpack` to work.
+The bundler example requires `sbt bundler/fastLinkJS::webpack` to work.
 
 You will then need to run a local http server from within the `examples/bundler` directory, and navigate to [http://localhost:8080/](http://localhost:8080/) (for example) in your browser.
 

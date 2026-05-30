@@ -1,6 +1,6 @@
 package com.example.example
 
-import tyrian.*
+import tyrian.Html
 import tyrian.Html.*
 
 object HomePage:

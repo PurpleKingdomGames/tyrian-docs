@@ -2,9 +2,9 @@ package mario
 
 import cats.effect.IO
 import org.scalajs.dom.window
-import tyrian.Html.*
-import tyrian.Sub.*
-import tyrian.*
+import tyrian.classic.Html.*
+import tyrian.classic.*
+import tyrian.Style
 
 import scala.scalajs.js.annotation.*
 

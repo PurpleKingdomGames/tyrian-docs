@@ -4,8 +4,8 @@ import cats.effect.IO
 import io.circe.generic.auto._
 import org.http4s.circe.CirceEntityCodec._
 import org.http4s.dom.FetchClientBuilder
-import tyrian.Html.*
-import tyrian.*
+import tyrian.classic.Html.*
+import tyrian.classic.*
 
 import scala.scalajs.js.annotation.*
 

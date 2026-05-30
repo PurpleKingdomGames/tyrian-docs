@@ -1,13 +1,13 @@
 package com.example.example
 
 import cats.effect.IO
-import org.http4s.HttpRoutes
-import org.http4s.dsl.Http4sDsl
+import fs2.io.file.Files
 import org.http4s.Header
-import org.http4s.headers.`Content-Type`
+import org.http4s.HttpRoutes
 import org.http4s.MediaType
 import org.http4s.StaticFile
-import fs2.io.file.Files
+import org.http4s.dsl.Http4sDsl
+import org.http4s.headers.`Content-Type`
 
 object Routes:
 
@@ -22,7 +22,7 @@ object Routes:
       case request @ GET -> Root / "spa.js" =>
         val spa = fs2.io.file.Path(
           "."
-        ) / "spa" / "target" / "scala-3.6.3" / "spa-opt" / "main.js"
+        ) / "spa" / "target" / "scala-3.8.3" / "spa-opt" / "main.js"
         StaticFile.fromPath(spa.absolute, Some(request)).getOrElseF(NotFound(spa.absolute.toString))
 
       case GET -> Root / "ssr" / in =>

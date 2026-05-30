@@ -1,0 +1,3 @@
+package build.examples.svg
+
+object `package` extends mill.Module

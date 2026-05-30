@@ -1,0 +1,3 @@
+package build.examples.`getting-started`.minimal
+
+object `package` extends build.ExampleModule

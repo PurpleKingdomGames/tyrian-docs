@@ -1,0 +1,3 @@
+package build.examples.effects.fs2
+
+object `package` extends build.ExampleModule

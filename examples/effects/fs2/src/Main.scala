@@ -1,8 +1,8 @@
 package example
 
 import cats.effect.IO
-import tyrian.Html.*
-import tyrian.*
+import tyrian.classic.Html.*
+import tyrian.classic.*
 
 import scala.concurrent.duration.*
 import scala.scalajs.js.annotation.*
@@ -27,7 +27,7 @@ object Main extends TyrianIOApp[Msg, Model]:
     )
 
   def subscriptions(model: Model): Sub[IO, Msg] =
-    Sub.make(
+    Sub.fromStream(
       "pulse",
       fs2.Stream
         .awakeEvery[IO](5.seconds)

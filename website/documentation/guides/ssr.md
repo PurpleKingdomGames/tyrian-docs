@@ -15,8 +15,8 @@ libraryDependencies ++= Seq(
 Then bring in the following imports:
 
 ```scala
-import tyrian.*
-import tyrian.Html.*
+import tyrian.classic.classic.*
+import tyrian.classic.classic.Html.*
 ```
 
 For HTMX, it's a similar arrangement:
@@ -30,8 +30,8 @@ libraryDependencies ++= Seq(
 With the following imports:
 
 ```scala
-import tyrian.htmx.*
-import tyrian.htmx.Html.*
+import tyrian.classic.classic.htmx.*
+import tyrian.classic.classic.htmx.Html.*
 ```
 
 You will also need to embed the HTMX JavaScript into your page. If you use Tyrian's syntax, it looks like this:
@@ -58,8 +58,8 @@ This arrangement has come back into fashion, and now has the fancy name "server-
 Below is a simple example of SRR with Tyrian:
 
 ```scala mdoc:js
-import tyrian.*
-import tyrian.Html.*
+import tyrian.classic.classic.*
+import tyrian.classic.classic.Html.*
 
 val styles  = style(CSS.`font-family`("Arial, Helvetica, sans-serif"))
 val topLine = p(b(text("HTML fragment rendered by Tyrian on the server.")))

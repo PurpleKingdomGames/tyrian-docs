@@ -27,10 +27,10 @@ import cats.effect.IO
 import cats.syntax.either.*
 import io.circe.HCursor
 import io.circe.parser.*
-import tyrian.*
-import tyrian.cmds.*
-import tyrian.http.*
-import tyrian.Html.*
+import tyrian.classic.classic.*
+import tyrian.classic.classic.cmds.*
+import tyrian.classic.classic.http.*
+import tyrian.classic.classic.Html.*
 ```
 
 Let's walk through this example starting with the `Model1` and `Msg1` types.
@@ -153,10 +153,10 @@ The following example demonstrates the usage of `WebSocket`, starting with the f
 
 ```scala mdoc:js:shared
 import cats.effect.IO
-import tyrian.Html.*
-import tyrian.*
-import tyrian.cmds.Logger
-import tyrian.websocket.*
+import tyrian.classic.classic.Html.*
+import tyrian.classic.classic.*
+import tyrian.classic.classic.cmds.Logger
+import tyrian.classic.classic.websocket.*
 ```
 
 Next we have the `Msg` and `Model` types.

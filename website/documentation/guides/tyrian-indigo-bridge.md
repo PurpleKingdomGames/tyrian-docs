@@ -52,7 +52,7 @@ To send a message to Tyrian, you emit a message as normal, e.g.:
 
 ```scala
 import indigo.*
-import tyrian.*
+import tyrian.classic.classic.*
 import cats.effect.IO
 
 val bridge: TyrianIndigoBridge[IO, String] = TyrianIndigoBridge()

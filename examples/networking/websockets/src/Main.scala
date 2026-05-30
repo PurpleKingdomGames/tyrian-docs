@@ -1,10 +1,11 @@
 package example
 
 import cats.effect.IO
-import tyrian.Html.*
-import tyrian.*
-import tyrian.cmds.Logger
-import tyrian.websocket.*
+import tyrian.classic.Html.*
+import tyrian.classic.*
+import tyrian.classic.cmds.Logger
+import tyrian.classic.websocket.*
+import tyrian.classic.syntax.*
 
 import scala.scalajs.js.annotation.*
 
@@ -120,7 +121,7 @@ final case class EchoSocket(socketUrl: String, socket: Option[WebSocket[IO]]):
     socket.map(_.publish(message)).getOrElse(Cmd.None)
 
   def subscribe(toMessage: WebSocketEvent => Msg): Sub[IO, Msg] =
-    socket.fold(Sub.emit[IO, Msg](EchoSocket.Status.Disconnected.asMsg)) {
+    socket.fold(Sub.emit[IO, Msg](EchoSocket.Status.Disconnected.asMsg, "tick-sub")) {
       _.subscribe(toMessage)
     }
 

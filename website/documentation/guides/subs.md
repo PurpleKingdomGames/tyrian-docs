@@ -11,7 +11,7 @@ import org.scalajs.dom.document
 import org.scalajs.dom.MouseEvent
 import cats.effect.IO
 
-import tyrian.*
+import tyrian.classic.classic.*
 
 type Model = Int
 
@@ -43,7 +43,7 @@ import scala.concurrent.duration._
 import org.scalajs.dom.document
 import org.scalajs.dom.MouseEvent
 
-import tyrian.*
+import tyrian.classic.classic.*
 
 enum Msg:
   case MouseMove(x: Double, y: Double)

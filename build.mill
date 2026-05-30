@@ -1,0 +1,57 @@
+//| mvnDeps:
+//|   - "org.typelevel::scalac-options:0.1.11"
+
+package build
+
+import mill._
+import mill.scalalib._
+import mill.scalajslib._
+import mill.scalajslib.api._
+import mill.scalalib.scalafmt.*
+import org.typelevel.scalacoptions.*
+
+trait ExampleModule extends ScalaJSModule with ScalafmtModule {
+  def scalaVersion   = "3.8.3"
+  def scalaJSVersion = "1.21.0"
+
+  override def scalacOptions = Task {
+    val baseOptions = ScalacOptions.tokensForVersion(
+      ScalaVersion.unsafeFromString(scalaVersion()),
+      ScalacOptions.default ++
+        ScalacOptions.fatalWarningOptions
+    )
+    
+    // "-Xfatal-warnings" removed because it's been replaced with "-Werror"
+    val excluded = Set(
+      "-Xfatal-warnings" //,
+      // "-Wunused:all",
+      // "-Wunused:locals",
+      // "-Wunused:params",
+      // "-Wunused:explicits",
+      // "-Wnonunit-statement"
+    )
+    val filtered = baseOptions.filterNot(excluded.contains)
+
+    super.scalacOptions() ++ filtered ++ Seq("-Werror")
+  }
+
+  val tyrianVersion = "0.30.0-M1-PREVIEW"
+
+  def mvnDeps =
+    Seq(
+      mvn"io.indigoengine::tyrian-io::$tyrianVersion"
+    )
+
+  override def moduleKind = Task(mill.scalajslib.api.ModuleKind.ESModule)
+
+  object test extends ScalaJSTests {
+    def mvnDeps = Seq(
+      mvn"org.scalameta::munit::1.2.2"
+    )
+
+    override def moduleKind = Task(mill.scalajslib.api.ModuleKind.CommonJSModule)
+
+    def testFramework = Task("munit.Framework")
+  }
+
+}

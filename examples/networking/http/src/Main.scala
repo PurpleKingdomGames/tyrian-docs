@@ -3,9 +3,9 @@ package example
 import cats.effect.IO
 import cats.syntax.either.*
 import io.circe.parser.*
-import tyrian.Html.*
-import tyrian.*
-import tyrian.http.*
+import tyrian.classic.Html.*
+import tyrian.classic.*
+import tyrian.classic.http.*
 
 import scala.scalajs.js.annotation.*
 

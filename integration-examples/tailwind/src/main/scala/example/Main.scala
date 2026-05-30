@@ -1,8 +1,8 @@
 package example
 
 import cats.effect.IO
-import tyrian.Html.*
-import tyrian.*
+import tyrian.classic.Html.*
+import tyrian.classic.*
 
 import scala.scalajs.js.annotation.*
 

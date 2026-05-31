@@ -93,24 +93,29 @@
     <li class="level3 nav-leaf"><a href="styles.html">Styles</a></li>
     <li class="level3 nav-leaf"><a href="routing.html">Frontend Routing</a></li>
     <li class="level2 nav-leaf"><a href="../integration-examples.html">Integration-Examples</a></li>
-    <li class="level1 nav-node"><a href="../../examples/">Examples</a></li>
-    <li class="level2 nav-node"><a href="../../examples/effects/">Effects</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/cats-effect/">Cats Effect</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/fs2/">FS2</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/zio/">ZIO</a></li>
+    <li class="level1 nav-node"><a href="../../examples/">Tyrian Examples</a></li>
     <li class="level2 nav-node"><a href="../../examples/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/extensions/">Extensions</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/minimal/">Minimal Setup</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/subcomponents/">Sub-Components</a></li>
-    <li class="level2 nav-node"><a href="../../examples/networking/">Networking</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http/">Http</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http4s-dom/">Http4s-Dom</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/sttp/">Sttp</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/websockets/">WebSockets</a></li>
-    <li class="level2 nav-node"><a href="../../examples/svg/">Svg</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/svg/clock/">Clock SVG</a></li>
-    <li class="level2 nav-node"><a href="../../examples/ui/">Ui</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/debouncing/">Debouncing</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/field/">Input Field</a></li>
+    <li class="level1 nav-node"><a href="../../examples-classic/">Classic Tyrian Examples</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/cats-effect/">Cats Effect</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/fs2/">FS2</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/zio/">ZIO</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/minimal/">Minimal Setup</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/subcomponents/">Sub-Components</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/networking/">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http4s-dom/">Http4s-Dom</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/sttp/">Sttp</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/websockets/">WebSockets</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/svg/clock/">Clock SVG</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/field/">Input Field</a></li>
   </ul>
 
 </nav>
@@ -142,15 +147,15 @@
   </span><span class="string-literal">&quot;io.indigoengine&quot;</span><span> %% </span><span class="string-literal">&quot;tyrian&quot;</span><span> % </span><span class="string-literal">&quot;@VERSION@&quot;</span><span>
 )</span></code></pre>
         <p>Then bring in the following imports:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="type-name">Html</span><span>.*</span></code></pre>
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="type-name">Html</span><span>.*</span></code></pre>
         <p>For HTMX, it&#39;s a similar arrangement:</p>
         <pre class="keep-together pdf epub"><code class="nohighlight"><span class="identifier">libraryDependencies</span><span> ++= </span><span class="type-name">Seq</span><span>(
   </span><span class="string-literal">&quot;io.indigoengine&quot;</span><span> %% </span><span class="string-literal">&quot;tyrian-htmx&quot;</span><span> % </span><span class="string-literal">&quot;@VERSION@&quot;</span><span>
 )</span></code></pre>
         <p>With the following imports:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">htmx</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">htmx</span><span>.</span><span class="type-name">Html</span><span>.*</span></code></pre>
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">htmx</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">htmx</span><span>.</span><span class="type-name">Html</span><span>.*</span></code></pre>
         <p>You will also need to embed the HTMX JavaScript into your page. If you use Tyrian&#39;s syntax, it looks like this:</p>
         <pre class="keep-together pdf epub"><code class="nohighlight"><span class="identifier">html</span><span>(
   </span><span class="identifier">head</span><span>(
@@ -166,8 +171,8 @@
         
         <h2 id="simple-ssr-with-tyrian" class="section"><a class="anchor-link left" href="#simple-ssr-with-tyrian"><i class="icofont-laika link">&#xef71;</i></a>Simple SSR with Tyrian</h2>
         <p>Below is a simple example of SRR with Tyrian:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="type-name">Html</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="type-name">Html</span><span>.*
 
 </span><span class="keyword">val</span><span> </span><span class="identifier">styles</span><span>  = </span><span class="identifier">style</span><span>(</span><span class="type-name">CSS</span><span>.</span><span class="identifier">`font-family`</span><span>(</span><span class="string-literal">&quot;Arial, Helvetica, sans-serif&quot;</span><span>))
 </span><span class="keyword">val</span><span> </span><span class="identifier">topLine</span><span> = </span><span class="identifier">p</span><span>(</span><span class="identifier">b</span><span>(</span><span class="identifier">text</span><span>(</span><span class="string-literal">&quot;HTML fragment rendered by Tyrian on the server.&quot;</span><span>)))

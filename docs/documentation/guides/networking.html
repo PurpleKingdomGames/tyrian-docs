@@ -93,24 +93,29 @@
     <li class="level3 nav-leaf"><a href="styles.html">Styles</a></li>
     <li class="level3 nav-leaf"><a href="routing.html">Frontend Routing</a></li>
     <li class="level2 nav-leaf"><a href="../integration-examples.html">Integration-Examples</a></li>
-    <li class="level1 nav-node"><a href="../../examples/">Examples</a></li>
-    <li class="level2 nav-node"><a href="../../examples/effects/">Effects</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/cats-effect/">Cats Effect</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/fs2/">FS2</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/zio/">ZIO</a></li>
+    <li class="level1 nav-node"><a href="../../examples/">Tyrian Examples</a></li>
     <li class="level2 nav-node"><a href="../../examples/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/extensions/">Extensions</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/minimal/">Minimal Setup</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/subcomponents/">Sub-Components</a></li>
-    <li class="level2 nav-node"><a href="../../examples/networking/">Networking</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http/">Http</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http4s-dom/">Http4s-Dom</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/sttp/">Sttp</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/websockets/">WebSockets</a></li>
-    <li class="level2 nav-node"><a href="../../examples/svg/">Svg</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/svg/clock/">Clock SVG</a></li>
-    <li class="level2 nav-node"><a href="../../examples/ui/">Ui</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/debouncing/">Debouncing</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/field/">Input Field</a></li>
+    <li class="level1 nav-node"><a href="../../examples-classic/">Classic Tyrian Examples</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/cats-effect/">Cats Effect</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/fs2/">FS2</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/zio/">ZIO</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/minimal/">Minimal Setup</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/subcomponents/">Sub-Components</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/networking/">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http4s-dom/">Http4s-Dom</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/sttp/">Sttp</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/websockets/">WebSockets</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/svg/clock/">Clock SVG</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/field/">Input Field</a></li>
   </ul>
 
 </nav>
@@ -154,10 +159,10 @@
 </span><span class="keyword">import</span><span> </span><span class="identifier">cats</span><span>.</span><span class="identifier">syntax</span><span>.</span><span class="identifier">either</span><span>.*
 </span><span class="keyword">import</span><span> </span><span class="identifier">io</span><span>.</span><span class="identifier">circe</span><span>.</span><span class="type-name">HCursor</span><span>
 </span><span class="keyword">import</span><span> </span><span class="identifier">io</span><span>.</span><span class="identifier">circe</span><span>.</span><span class="identifier">parser</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">http</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="type-name">Html</span><span>.*</span></code></pre>
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">http</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="type-name">Html</span><span>.*</span></code></pre>
         <p>Let&#39;s walk through this example starting with the <code>Model1</code> and <code>Msg1</code> types.</p>
         <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">final</span><span> </span><span class="keyword">case</span><span> </span><span class="keyword">class</span><span> </span><span class="type-name">Model1</span><span>(</span><span class="identifier">topic</span><span>: </span><span class="type-name">String</span><span>, </span><span class="identifier">gifUrl</span><span>: </span><span class="type-name">String</span><span>)
 
@@ -250,10 +255,10 @@
         <h3 id="ws-echo-server" class="section"><a class="anchor-link left" href="#ws-echo-server"><i class="icofont-laika link">&#xef71;</i></a>WS echo server</h3>
         <p>The following example demonstrates the usage of <code>WebSocket</code>, starting with the following imports:</p>
         <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">cats</span><span>.</span><span class="identifier">effect</span><span>.</span><span class="type-name">IO</span><span>
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="type-name">Html</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.</span><span class="type-name">Logger</span><span>
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">websocket</span><span>.*</span></code></pre>
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="type-name">Html</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.</span><span class="type-name">Logger</span><span>
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">websocket</span><span>.*</span></code></pre>
         <p>Next we have the <code>Msg</code> and <code>Model</code> types.</p>
         <pre class="keep-together pdf epub"><code class="nohighlight"><span class="identifier">enum</span><span> </span><span class="type-name">Msg</span><span>:
   </span><span class="keyword">case</span><span> </span><span class="type-name">FromSocket</span><span>(</span><span class="identifier">message</span><span>: </span><span class="type-name">String</span><span>)

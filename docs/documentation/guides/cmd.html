@@ -93,24 +93,29 @@
     <li class="level3 nav-leaf"><a href="styles.html">Styles</a></li>
     <li class="level3 nav-leaf"><a href="routing.html">Frontend Routing</a></li>
     <li class="level2 nav-leaf"><a href="../integration-examples.html">Integration-Examples</a></li>
-    <li class="level1 nav-node"><a href="../../examples/">Examples</a></li>
-    <li class="level2 nav-node"><a href="../../examples/effects/">Effects</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/cats-effect/">Cats Effect</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/fs2/">FS2</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/zio/">ZIO</a></li>
+    <li class="level1 nav-node"><a href="../../examples/">Tyrian Examples</a></li>
     <li class="level2 nav-node"><a href="../../examples/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/extensions/">Extensions</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/minimal/">Minimal Setup</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/subcomponents/">Sub-Components</a></li>
-    <li class="level2 nav-node"><a href="../../examples/networking/">Networking</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http/">Http</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http4s-dom/">Http4s-Dom</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/sttp/">Sttp</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/websockets/">WebSockets</a></li>
-    <li class="level2 nav-node"><a href="../../examples/svg/">Svg</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/svg/clock/">Clock SVG</a></li>
-    <li class="level2 nav-node"><a href="../../examples/ui/">Ui</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/debouncing/">Debouncing</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/field/">Input Field</a></li>
+    <li class="level1 nav-node"><a href="../../examples-classic/">Classic Tyrian Examples</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/cats-effect/">Cats Effect</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/fs2/">FS2</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/zio/">ZIO</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/minimal/">Minimal Setup</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/subcomponents/">Sub-Components</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/networking/">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http4s-dom/">Http4s-Dom</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/sttp/">Sttp</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/websockets/">WebSockets</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/svg/clock/">Clock SVG</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/field/">Input Field</a></li>
   </ul>
 
 </nav>
@@ -155,8 +160,8 @@
         <p>Commands take the form <code>Cmd[IO, Msg]</code> (<code>IO</code> is used for illustrative purposes) which is to say that they represent some sort of side effect that can produce a message to be cleanly fed back into your single page application&#39;s <code>updateModel</code> function.</p>
         <p>Commands can be produced as part of a result of calling the <code>init</code> or <code>updateModel</code> functions, which both return a <code>(Model, Cmd[IO, Msg])</code>.</p>
         <p>Here is an example in which, on receiving a message <code>Msg.LogThis</code>, we are not going to change the model, but we want to write to the browser&#39;s JavaScript console:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
 </span><span class="keyword">import</span><span> </span><span class="identifier">cats</span><span>.</span><span class="identifier">effect</span><span>.</span><span class="type-name">IO</span><span>
 
 </span><span class="keyword">type</span><span> </span><span class="type-name">Model</span><span> = </span><span class="type-name">Int</span><span>

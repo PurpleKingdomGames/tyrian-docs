@@ -93,24 +93,29 @@
     <li class="level3 nav-leaf"><a href="styles.html">Styles</a></li>
     <li class="level3 nav-leaf"><a href="routing.html">Frontend Routing</a></li>
     <li class="level2 nav-leaf"><a href="../integration-examples.html">Integration-Examples</a></li>
-    <li class="level1 nav-node"><a href="../../examples/">Examples</a></li>
-    <li class="level2 nav-node"><a href="../../examples/effects/">Effects</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/cats-effect/">Cats Effect</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/fs2/">FS2</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/zio/">ZIO</a></li>
+    <li class="level1 nav-node"><a href="../../examples/">Tyrian Examples</a></li>
     <li class="level2 nav-node"><a href="../../examples/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/extensions/">Extensions</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/minimal/">Minimal Setup</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/subcomponents/">Sub-Components</a></li>
-    <li class="level2 nav-node"><a href="../../examples/networking/">Networking</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http/">Http</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http4s-dom/">Http4s-Dom</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/sttp/">Sttp</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/websockets/">WebSockets</a></li>
-    <li class="level2 nav-node"><a href="../../examples/svg/">Svg</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/svg/clock/">Clock SVG</a></li>
-    <li class="level2 nav-node"><a href="../../examples/ui/">Ui</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/debouncing/">Debouncing</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/field/">Input Field</a></li>
+    <li class="level1 nav-node"><a href="../../examples-classic/">Classic Tyrian Examples</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/cats-effect/">Cats Effect</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/fs2/">FS2</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/zio/">ZIO</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/minimal/">Minimal Setup</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/subcomponents/">Sub-Components</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/networking/">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http4s-dom/">Http4s-Dom</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/sttp/">Sttp</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/websockets/">WebSockets</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/svg/clock/">Clock SVG</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/field/">Input Field</a></li>
   </ul>
 
 </nav>
@@ -169,8 +174,8 @@
         <h3 id="dom" class="section"><a class="anchor-link left" href="#dom"><i class="icofont-laika link">&#xef71;</i></a><code>Dom</code></h3>
         <p>Assuming two messages <code>Error</code> and <code>Empty</code>, we can attempt to focus a given ID.</p>
         <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">cats</span><span>.</span><span class="identifier">effect</span><span>.</span><span class="type-name">IO</span><span>
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
 
 </span><span class="keyword">val</span><span> </span><span class="identifier">cmd</span><span>: </span><span class="type-name">Cmd</span><span>[</span><span class="type-name">IO</span><span>, </span><span class="type-name">Msg</span><span>] =
   </span><span class="type-name">Dom</span><span>.</span><span class="identifier">focus</span><span>(</span><span class="string-literal">&quot;my-id&quot;</span><span>) {
@@ -182,7 +187,7 @@
         <h3 id="filereader" class="section"><a class="anchor-link left" href="#filereader"><i class="icofont-laika link">&#xef71;</i></a><code>FileReader</code></h3>
         <p>Will read any file data, with build in support for text and images.</p>
         <p>Assuming two messages <code>Error</code> and <code>Read</code>, we can attempt to read the contents of a text file.</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
 
 </span><span class="keyword">val</span><span> </span><span class="identifier">cmd</span><span>: </span><span class="type-name">Cmd</span><span>[</span><span class="type-name">IO</span><span>, </span><span class="type-name">Msg</span><span>] =
   </span><span class="type-name">FileReader</span><span>.</span><span class="identifier">readText</span><span>(</span><span class="string-literal">&quot;my-file-input-field-id&quot;</span><span>) {
@@ -195,7 +200,7 @@
         
         <h3 id="imageloader" class="section"><a class="anchor-link left" href="#imageloader"><i class="icofont-laika link">&#xef71;</i></a><code>ImageLoader</code></h3>
         <p>Given a path, this cmd will load an image and create and return an <code>HTMLImageElement</code> for you to make use of.</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
 
 </span><span class="keyword">val</span><span> </span><span class="identifier">cmd</span><span>: </span><span class="type-name">Cmd</span><span>[</span><span class="type-name">IO</span><span>, </span><span class="type-name">Msg</span><span>] =
   </span><span class="type-name">ImageLoader</span><span>.</span><span class="identifier">load</span><span>(</span><span class="string-literal">&quot;path/to/img.png&quot;</span><span>) {
@@ -205,7 +210,7 @@
         
         <h3 id="localstorage" class="section"><a class="anchor-link left" href="#localstorage"><i class="icofont-laika link">&#xef71;</i></a><code>LocalStorage</code></h3>
         <p>A series of commands that mirror the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localstorage interface</a>.</p>
-        <pre><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
+        <pre><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
 
 </span><span class="keyword">val</span><span> </span><span class="identifier">cmd</span><span>: </span><span class="type-name">Cmd</span><span>[</span><span class="type-name">IO</span><span>, </span><span class="type-name">Msg</span><span>] =
   </span><span class="type-name">Cmd</span><span>.</span><span class="type-name">Batch</span><span>[</span><span class="type-name">IO</span><span>, </span><span class="type-name">Msg</span><span>](
@@ -237,12 +242,12 @@
         
         <h3 id="logger" class="section"><a class="anchor-link left" href="#logger"><i class="icofont-laika link">&#xef71;</i></a><code>Logger</code></h3>
         <p>Allows you to log to your browsers JavaScript console:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
 
 </span><span class="keyword">val</span><span> </span><span class="identifier">cmd</span><span>: </span><span class="type-name">Cmd</span><span>[</span><span class="type-name">IO</span><span>, </span><span class="type-name">Msg</span><span>] =
   </span><span class="type-name">Logger</span><span>.</span><span class="identifier">info</span><span>(</span><span class="string-literal">&quot;Log this!&quot;</span><span>)</span></code></pre>
         <p>If you&#39;re app is doing a lot of regular work, you can cut down the noise with the &#39;once&#39; versions:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
 
 </span><span class="keyword">val</span><span> </span><span class="identifier">cmd</span><span>: </span><span class="type-name">Cmd</span><span>[</span><span class="type-name">IO</span><span>, </span><span class="type-name">Msg</span><span>] =
   </span><span class="type-name">Logger</span><span>.</span><span class="identifier">debugOnce</span><span>(</span><span class="string-literal">&quot;Log this exact message only once!&quot;</span><span>)</span></code></pre>
@@ -250,7 +255,7 @@
         <h3 id="random" class="section"><a class="anchor-link left" href="#random"><i class="icofont-laika link">&#xef71;</i></a><code>Random</code></h3>
         <p>As you might expect, <code>Random</code> produces random values! Random works slightly differently from other commands, in that it doesn&#39;t except a conversion function to turn the result into a message. You do that by mapping over it.</p>
         <p>Assuming a message <code>RandomValue</code>, here are a few examples:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">cmds</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">cmds</span><span>.*
 
 </span><span class="keyword">val</span><span> </span><span class="identifier">toMessage</span><span> = (</span><span class="identifier">v</span><span>: </span><span class="type-name">String</span><span>) =&gt; </span><span class="type-name">Msg</span><span>.</span><span class="type-name">RandomValue</span><span>(</span><span class="identifier">v</span><span>)
 

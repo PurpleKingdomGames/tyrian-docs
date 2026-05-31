@@ -93,24 +93,29 @@
     <li class="level3 nav-leaf"><a href="styles.html">Styles</a></li>
     <li class="level3 nav-leaf"><a href="routing.html">Frontend Routing</a></li>
     <li class="level2 nav-leaf"><a href="../integration-examples.html">Integration-Examples</a></li>
-    <li class="level1 nav-node"><a href="../../examples/">Examples</a></li>
-    <li class="level2 nav-node"><a href="../../examples/effects/">Effects</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/cats-effect/">Cats Effect</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/fs2/">FS2</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/effects/zio/">ZIO</a></li>
+    <li class="level1 nav-node"><a href="../../examples/">Tyrian Examples</a></li>
     <li class="level2 nav-node"><a href="../../examples/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples/getting-started/extensions/">Extensions</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/minimal/">Minimal Setup</a></li>
     <li class="level3 nav-leaf"><a href="../../examples/getting-started/subcomponents/">Sub-Components</a></li>
-    <li class="level2 nav-node"><a href="../../examples/networking/">Networking</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http/">Http</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/http4s-dom/">Http4s-Dom</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/sttp/">Sttp</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/networking/websockets/">WebSockets</a></li>
-    <li class="level2 nav-node"><a href="../../examples/svg/">Svg</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/svg/clock/">Clock SVG</a></li>
-    <li class="level2 nav-node"><a href="../../examples/ui/">Ui</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/debouncing/">Debouncing</a></li>
-    <li class="level3 nav-leaf"><a href="../../examples/ui/field/">Input Field</a></li>
+    <li class="level1 nav-node"><a href="../../examples-classic/">Classic Tyrian Examples</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/effects/">Effects</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/cats-effect/">Cats Effect</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/fs2/">FS2</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/effects/zio/">ZIO</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/getting-started/">Getting started</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/minimal/">Minimal Setup</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/getting-started/subcomponents/">Sub-Components</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/networking/">Networking</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http/">Http</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/http4s-dom/">Http4s-Dom</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/sttp/">Sttp</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/networking/websockets/">WebSockets</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/svg/">Svg</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/svg/clock/">Clock SVG</a></li>
+    <li class="level2 nav-node"><a href="../../examples-classic/ui/">Ui</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/debouncing/">Debouncing</a></li>
+    <li class="level3 nav-leaf"><a href="../../examples-classic/ui/field/">Input Field</a></li>
   </ul>
 
 </nav>
@@ -140,9 +145,9 @@
         <h2 id="html-syntax" class="section"><a class="anchor-link left" href="#html-syntax"><i class="icofont-laika link">&#xef71;</i></a>HTML syntax</h2>
         <p>In Tyrian, you describe your view in Scala and the VirtualDom implementation that powers Tyrian (<a href="https://github.com/buntec/scala-js-snabbdom">Scala.js Snabbdom</a>) renders that description into HTML.</p>
         <p>Here is a simple made up example of the syntax to give you a flavor:</p>
-        <pre><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="type-name">Html</span><span>.*
-</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="type-name">CSS</span><span>
+        <pre><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="type-name">Html</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="type-name">CSS</span><span>
 
 </span><span class="identifier">enum</span><span> </span><span class="type-name">Msg</span><span>:
   </span><span class="keyword">case</span><span> </span><span class="type-name">Greet</span><span>
@@ -185,21 +190,21 @@ _class</code></pre>
         
         <h4 id="optional-tags" class="section"><a class="anchor-link left" href="#optional-tags"><i class="icofont-laika link">&#xef71;</i></a>Optional tags</h4>
         <p>Sometime you might want to optionally render a tag, or not. To help with this, you can use the <code>orEmpty</code> extension method:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">syntax</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">syntax</span><span>.*
 
 </span><span class="type-name">Option</span><span>(</span><span class="identifier">p</span><span>(</span><span class="string-literal">&quot;Show this!&quot;</span><span>)).</span><span class="identifier">orEmpty</span></code></pre>
         <p>Or the <code>Empty</code> type:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">syntax</span><span>.*
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">syntax</span><span>.*
 
 </span><span class="keyword">if</span><span> </span><span class="identifier">showIt</span><span> </span><span class="identifier">then</span><span> </span><span class="identifier">p</span><span>(</span><span class="string-literal">&quot;Show this!&quot;</span><span>) </span><span class="keyword">else</span><span> </span><span class="type-name">Empty</span></code></pre>
         
         <h3 id="svg" class="section"><a class="anchor-link left" href="#svg"><i class="icofont-laika link">&#xef71;</i></a>SVG</h3>
         <p>You can also pull in SVG tags and attributes using:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="type-name">SVG</span><span>.*</span></code></pre>
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="type-name">SVG</span><span>.*</span></code></pre>
         
         <h3 id="css" class="section"><a class="anchor-link left" href="#css"><i class="icofont-laika link">&#xef71;</i></a>CSS</h3>
         <p>Many standard CSS terms can be imported using:</p>
-        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="type-name">CSS</span><span>.*</span></code></pre>
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">tyrian</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="identifier">classic</span><span>.</span><span class="type-name">CSS</span><span>.*</span></code></pre>
         
         <h3 id="rolling-your-own" class="section"><a class="anchor-link left" href="#rolling-your-own"><i class="icofont-laika link">&#xef71;</i></a>Rolling your own</h3>
         <p>If you find we&#39;ve missed a tag or attribute or something, <a href="https://github.com/PurpleKingdomGames/indigoengine/issues">please raise an issue</a>. In the meantime, you can always make your own. Here are just a few made up examples, each of these has numerous constructors for you to explore:</p>

@@ -6,7 +6,7 @@ import tyrian.ui.*
 import scala.scalajs.js.annotation.*
 
 @JSExportTopLevel("TyrianApp")
-object Counter extends App[Unit, Model]:
+object Main extends App[Unit, Model]:
 
   given Theme = Theme.default
 

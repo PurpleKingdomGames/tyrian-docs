@@ -1,3 +1,0 @@
-package build.examples.effects.`cats-effect`
-
-object `package` extends build.ExampleModule

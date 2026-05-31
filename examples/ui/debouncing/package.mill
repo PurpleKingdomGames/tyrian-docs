@@ -1,3 +1,0 @@
-package build.examples.ui.debouncing
-
-object `package` extends build.ExampleModule

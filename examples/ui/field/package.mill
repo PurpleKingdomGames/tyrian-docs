@@ -1,3 +1,0 @@
-package build.examples.ui.field
-
-object `package` extends build.ExampleModule

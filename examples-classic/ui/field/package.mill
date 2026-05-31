@@ -1,0 +1,3 @@
+package build.`examples-classic`.ui.field
+
+object `package` extends build.ExampleModule

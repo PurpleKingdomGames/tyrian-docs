@@ -1,0 +1,3 @@
+package build.`examples-classic`.svg.clock
+
+object `package` extends build.ExampleModule

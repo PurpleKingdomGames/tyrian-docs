@@ -6,18 +6,18 @@ import tyrian.ui.*
 import scala.scalajs.js.annotation.*
 
 @JSExportTopLevel("TyrianApp")
-object Counter extends App[Unit, Model]:
+object Main extends App[Unit, Model]:
 
   given Theme = Theme.default
 
-  def router: Location => GlobalMsg = Routing.none(NoOp())
+  def router: Location => GlobalMsg = Routing.none(AppMsg.NoOp)
 
   def init(flags: Map[String, String]): Result[Model] =
     Result(Model())
 
   def update(model: Model): GlobalMsg => Result[Model] =
-    case NoOp() =>
-      Result(model)
+    case e: AppMsg =>
+      AppMsg.handle(model)(e)
 
     case _ =>
       Result(model)
@@ -25,7 +25,10 @@ object Counter extends App[Unit, Model]:
   def view(model: Model): HtmlRoot =
     HtmlRoot.div(
       HtmlFragment(
-        TextBlock("Hello, Tyrian!")
+        Column(
+          TextBlock("Hello, Tyrian!"),
+          Placeholder(MarkerId("clock"))
+        ).withSpacing(Spacing.comfortable)
       )
     )
 
@@ -33,8 +36,22 @@ object Counter extends App[Unit, Model]:
     Batch.empty
 
   def extensions(flags: Map[String, String], model: Model): Set[Extension[Unit, HtmlFragment]] =
-    Set()
+    Set(
+      CustomExtension()
+    )
 
 final case class Model()
 
-final case class NoOp() extends GlobalMsg
+enum AppMsg extends GlobalMsg:
+  case NoOp
+  case Log(msg: String)
+
+object AppMsg:
+
+  def handle(model: Model): AppMsg => Result[Model] =
+    case AppMsg.Log(msg) =>
+      Result(model)
+        .log(msg)
+
+    case AppMsg.NoOp =>
+      Result(model)

@@ -1,0 +1,12 @@
+package build.`examples-classic`.effects.zio
+
+import mill._
+import mill.scalalib._
+
+object `package` extends build.ExampleModule:
+  
+  override def mvnDeps =
+    Seq(
+      mvn"io.indigoengine::tyrian-zio::$tyrianVersion",
+      mvn"dev.zio::zio-interop-cats::23.1.0.13"
+    )

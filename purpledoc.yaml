@@ -19,6 +19,11 @@ website:
   navigationOrder:
     - documentation
     - examples
+    - examples-classic
+  navigationMappings:
+    documentation: Documentation
+    examples: Tyrian Examples
+    examples-classic: Classic Tyrian Examples
 docsRepo:
   name: Docs
   url: https://github.com/PurpleKingdomGames/tyrian-docs

@@ -1,3 +1,0 @@
-package build.examples.effects
-
-object `package` extends mill.Module

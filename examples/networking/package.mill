@@ -1,3 +1,0 @@
-package build.examples.networking
-
-object `package` extends mill.Module

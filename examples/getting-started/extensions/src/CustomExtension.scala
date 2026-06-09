@@ -1,7 +1,6 @@
 package example
 
 import tyrian.*
-import tyrian.extensions.*
 import tyrian.syntax.*
 
 import tyrian.classic.Html.*
@@ -52,7 +51,7 @@ final case class CustomExtension() extends Extension.Standard[HtmlFragment]:
 
   def watchers(model: CustomExtension.Model): Batch[Watcher] =
     Batch(
-      Watcher.every(Seconds(1), t => CustomExtension.Tick(t))
+      Watcher.fromDate(Seconds(1), dt => CustomExtension.Tick(Seconds(dt.getSeconds())))
     )
 
 object CustomExtension:

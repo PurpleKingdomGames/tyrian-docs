@@ -4,7 +4,6 @@ import cats.effect.IO
 import org.scalajs.dom.window
 import tyrian.classic.Html.*
 import tyrian.classic.*
-import tyrian.Style
 
 import scala.scalajs.js.annotation.*
 

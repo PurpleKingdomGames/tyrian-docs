@@ -10,7 +10,6 @@ Extensions come in two forms:
 
 Standard extensions, compose either `HtmlFragment`s or `TerminalFragment`s, to output a view suitable for the current platform.
 
-
 ## `Extension.Graphical`
 
 Graphical extensions supply a graphics context (if there is one) to the extension for special modes of rendering, such as (currently) WebGL or OpenGL.

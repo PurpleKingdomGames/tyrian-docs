@@ -54,6 +54,12 @@ final case class CustomExtension() extends Extension.Standard[HtmlFragment]:
       Watcher.fromDate(Seconds(1), dt => CustomExtension.Tick(Seconds(dt.getSeconds())))
     )
 
+  def prepare(model: CustomExtension.Model): Unit =
+    ()
+
+  def teardown(model: CustomExtension.Model): Unit =
+    ()
+
 object CustomExtension:
 
   final case class Model(time: Seconds)

@@ -11,8 +11,8 @@ import mill.scalalib.scalafmt.*
 import org.typelevel.scalacoptions.*
 
 trait ExampleModule extends ScalaJSModule with ScalafmtModule {
-  def scalaVersion   = "3.8.3"
-  def scalaJSVersion = "1.21.0"
+  def scalaVersion   = "3.8.4"
+  def scalaJSVersion = "1.22.0"
 
   override def scalacOptions = Task {
     val baseOptions = ScalacOptions.tokensForVersion(
@@ -35,7 +35,7 @@ trait ExampleModule extends ScalaJSModule with ScalafmtModule {
     super.scalacOptions() ++ filtered ++ Seq("-Werror")
   }
 
-  val tyrianVersion = "0.30.0-M2-PREVIEW"
+  val tyrianVersion = "0.30.0-M4-PREVIEW"
 
   def mvnDeps =
     Seq(

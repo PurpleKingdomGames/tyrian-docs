@@ -35,7 +35,7 @@ trait ExampleModule extends ScalaJSModule with ScalafmtModule {
     super.scalacOptions() ++ filtered ++ Seq("-Werror")
   }
 
-  val tyrianVersion = "0.30.0-M4-PREVIEW"
+  val tyrianVersion = "0.30.0-M5-PREVIEW"
 
   def mvnDeps =
     Seq(

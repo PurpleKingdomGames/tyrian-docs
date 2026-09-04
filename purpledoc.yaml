@@ -24,6 +24,20 @@ website:
     documentation: Documentation
     examples: Tyrian Examples
     examples-classic: Classic Tyrian Examples
+  projectLinks:
+    - label: Indigo Docs
+      url: https://indigoengine.io/
+    - label: Tyrian Docs
+      url: https://tyrian.indigoengine.io/
+    - label: Ultraviolet Docs
+      url: https://ultraviolet.indigoengine.io/
+    - label: Roguelike-Starterkit Docs
+      url: https://rlsk.indigoengine.io/
+  # teasers:
+  #   - title: Purely Functional
+  #     description: Immutable game state, no surprises.
+  #   - title: Cross Platform
+  #     description: Runs anywhere Scala.js runs.
 docsRepo:
   name: Docs
   url: https://github.com/PurpleKingdomGames/tyrian-docs
